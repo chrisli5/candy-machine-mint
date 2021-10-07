@@ -1,7 +1,10 @@
 import "./App.css";
 import { useMemo } from "react";
+import { Route, Switch, NavLink } from "react-router-dom";
 
 import Home from "../routes/Home/Home";
+import Gallery from "../routes/Gallery/Gallery";
+import Provenance from "../routes/Provenance/Provenance";
 
 import * as anchor from "@project-serum/anchor";
 import { clusterApiUrl } from "@solana/web3.js";
@@ -87,14 +90,29 @@ const App = () => {
       <ConnectionProvider endpoint={endpoint}>
         <WalletProvider wallets={wallets} autoConnect={true}>
           <WalletDialogProvider>
-            <Home
-              candyMachineId={candyMachineId}
-              config={config}
-              connection={connection}
-              startDate={startDateSeed}
-              treasury={treasury}
-              txTimeout={txTimeout}
-            />
+            <nav>
+              <NavLink to="/">Home</NavLink>
+              <NavLink to="/gallery">Gallery</NavLink>
+              <NavLink to="/provenance">Provenance</NavLink>
+            </nav>
+            <Switch>
+              <Route exact path="/">
+                <Home
+                  candyMachineId={candyMachineId}
+                  config={config}
+                  connection={connection}
+                  startDate={startDateSeed}
+                  treasury={treasury}
+                  txTimeout={txTimeout}
+                />
+              </Route>
+              <Route path="/gallery">
+                <Gallery />
+              </Route>
+              <Route path="/provenance">
+                <Provenance />
+              </Route>
+            </Switch>
           </WalletDialogProvider>
         </WalletProvider>
       </ConnectionProvider>
