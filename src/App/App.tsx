@@ -1,4 +1,4 @@
-import "./App.css";
+import "./app.css";
 import { useMemo } from "react";
 import { Route, Switch, NavLink } from "react-router-dom";
 
