@@ -1,57 +1,45 @@
-import { useEffect, useState } from "react";
-import styled from "styled-components";
-import Countdown from "react-countdown";
-import { Button, CircularProgress, Snackbar } from "@material-ui/core";
-import Alert from "@material-ui/lab/Alert";
-
-import * as anchor from "@project-serum/anchor";
-
-import { LAMPORTS_PER_SOL } from "@solana/web3.js";
-
-import { useAnchorWallet } from "@solana/wallet-adapter-react";
-import { WalletDialogButton } from "@solana/wallet-adapter-material-ui";
-
 import {
-  CandyMachine,
   awaitTransactionSignatureConfirmation,
+  CandyMachine,
   getCandyMachineState,
   mintOneToken,
   shortenAddress,
-} from "../../candy-machine";
+} from "../candy-machine";
+import { Button, CircularProgress } from "@material-ui/core";
+import Countdown from "react-countdown";
+import styled from "styled-components";
+import { WalletDialogButton } from "@solana/wallet-adapter-material-ui";
+import * as anchor from "@project-serum/anchor";
+import React, { useEffect, useState } from "react";
+import { useAnchorWallet } from "@solana/wallet-adapter-react";
+import { LAMPORTS_PER_SOL } from "@solana/web3.js";
+import { AlertState } from "./AlertSnackbar";
 
 const ConnectButton = styled(WalletDialogButton)``;
-
 const CounterText = styled.span``; // add your styles here
-
 const MintContainer = styled.div``; // add your styles here
-
 const MintButton = styled(Button)``; // add your styles here
 
-export interface HomeProps {
+export interface CandyButtonProps {
+  setAlertState: React.Dispatch<React.SetStateAction<AlertState>>;
+  setStartDate: React.Dispatch<React.SetStateAction<Date>>;
+  alertState: AlertState;
   candyMachineId: anchor.web3.PublicKey;
   config: anchor.web3.PublicKey;
   connection: anchor.web3.Connection;
-  startDate: number;
+  startDate: Date;
   treasury: anchor.web3.PublicKey;
   txTimeout: number;
 }
 
-const Home = (props: HomeProps) => {
+const CandyButton = (props: CandyButtonProps): JSX.Element => {
   const [balance, setBalance] = useState<number>();
   const [isActive, setIsActive] = useState(false); // true when countdown completes
   const [isSoldOut, setIsSoldOut] = useState(false); // true when items remaining is zero
   const [isMinting, setIsMinting] = useState(false); // true when user got to press MINT
-
   const [itemsAvailable, setItemsAvailable] = useState(0);
   const [itemsRedeemed, setItemsRedeemed] = useState(0);
   const [itemsRemaining, setItemsRemaining] = useState(0);
-
-  const [alertState, setAlertState] = useState<AlertState>({
-    open: false,
-    message: "",
-    severity: undefined,
-  });
-
   const [startDate, setStartDate] = useState(new Date(props.startDate));
 
   const wallet = useAnchorWallet();
@@ -103,13 +91,13 @@ const Home = (props: HomeProps) => {
         );
 
         if (!status?.err) {
-          setAlertState({
+          props.setAlertState({
             open: true,
             message: "Congratulations! Mint succeeded!",
             severity: "success",
           });
         } else {
-          setAlertState({
+          props.setAlertState({
             open: true,
             message: "Mint failed! Please try again!",
             severity: "error",
@@ -135,7 +123,7 @@ const Home = (props: HomeProps) => {
         }
       }
 
-      setAlertState({
+      props.setAlertState({
         open: true,
         message,
         severity: "error",
@@ -166,7 +154,7 @@ const Home = (props: HomeProps) => {
   ]);
 
   return (
-    <main>
+    <div>
       {wallet && (
         <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
       )}
@@ -207,35 +195,16 @@ const Home = (props: HomeProps) => {
           </MintButton>
         )}
       </MintContainer>
-
-      <Snackbar
-        open={alertState.open}
-        autoHideDuration={6000}
-        onClose={() => setAlertState({ ...alertState, open: false })}
-      >
-        <Alert
-          onClose={() => setAlertState({ ...alertState, open: false })}
-          severity={alertState.severity}
-        >
-          {alertState.message}
-        </Alert>
-      </Snackbar>
-    </main>
+    </div>
   );
 };
-
-interface AlertState {
-  open: boolean;
-  message: string;
-  severity: "success" | "info" | "warning" | "error" | undefined;
-}
 
 const renderCounter = ({ days, hours, minutes, seconds, completed }: any) => {
   return (
     <CounterText>
-      {hours + (days || 0) * 24} hours, {minutes} minutes, {seconds} seconds
+      {hours} hours, {minutes} minutes, {seconds} seconds
     </CounterText>
   );
 };
 
-export default Home;
+export default CandyButton;
