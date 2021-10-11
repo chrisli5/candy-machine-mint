@@ -1,3 +1,4 @@
+.link,
 .navlink {
   color: #fff;
   font-size: 12px;
@@ -9,10 +10,12 @@
   text-transform: uppercase;
 }
 
+.link:hover,
 .navlink:hover {
   color: #bfc500;
 }
 
-.navlink--active {
+.link:active,
+.navlink:active {
   color: #bfc500;
 }
