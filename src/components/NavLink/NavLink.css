@@ -1,0 +1,18 @@
+.navlink {
+  color: #fff;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 500;
+  caret-color: transparent;
+  transition: 0.15s;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.navlink:hover {
+  color: #bfc500;
+}
+
+.navlink--active {
+  color: #bfc500;
+}
