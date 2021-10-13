@@ -7,7 +7,7 @@ import Image from "react-bootstrap/Image";
 
 export default (props) => (
   <Navbar expand="md" variant="dark">
-    <Container fluid>
+    <Container>
       <Navbar.Brand href="#home">
         <Image
           src="../images/bayc-logo-z.png"
@@ -17,22 +17,22 @@ export default (props) => (
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav fill className="w-100">
-          <Nav.Item className="d-flex justify-content-end my-auto justify-content-md-start">
+          <Nav.Item className="d-flex justify-content-end my-auto">
             <NavLink to="/">Home</NavLink>
           </Nav.Item>
-          <Nav.Item className="d-flex justify-content-end my-auto justify-content-md-start">
+          <Nav.Item className="d-flex justify-content-end my-auto">
             <NavLink to="/#buy">Buy a Drago</NavLink>
           </Nav.Item>
-          <Nav.Item className="d-flex justify-content-end my-auto justify-content-md-start">
+          <Nav.Item className="d-flex justify-content-end my-auto">
             <NavLink to="/#roadmap">Roadmap</NavLink>
           </Nav.Item>
-          <Nav.Item className="d-flex justify-content-end my-auto justify-content-md-start">
+          <Nav.Item className="d-flex justify-content-end my-auto">
             <NavLink to="/#team">Team</NavLink>
           </Nav.Item>
-          <Nav.Item className="d-flex justify-content-end my-auto justify-content-md-start">
+          <Nav.Item className="d-flex justify-content-end my-auto">
             <NavLink to="/gallery">Collection</NavLink>
           </Nav.Item>
-          <Nav.Item className="d-flex justify-content-end my-auto justify-content-md-start">
+          <Nav.Item className="d-flex justify-content-end my-auto">
             <Link href="http://discord.com">Discord</Link>
           </Nav.Item>
         </Nav>

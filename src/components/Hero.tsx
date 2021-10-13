@@ -5,7 +5,7 @@ import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 
 const Hero = () => (
-  <Container className="mb-4 mb-lg-5">
+  <Container>
     <Row>
       <Col className="px-0 col-12">
         <Image
