@@ -13,12 +13,14 @@ import * as anchor from "@project-serum/anchor";
 import React, { useEffect, useState } from "react";
 import { useAnchorWallet } from "@solana/wallet-adapter-react";
 import { LAMPORTS_PER_SOL } from "@solana/web3.js";
+import Container from "react-bootstrap/Container";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import Card from "../components/Card";
 import { AlertState } from "./AlertSnackbar";
+import CandyStat from "./CandyStat";
 
-const ConnectButton = styled(WalletDialogButton)``;
 const CounterText = styled.span``; // add your styles here
-const MintContainer = styled.div``; // add your styles here
-const MintButton = styled(Button)``; // add your styles here
 
 export interface CandyButtonProps {
   setAlertState: React.Dispatch<React.SetStateAction<AlertState>>;
@@ -154,48 +156,91 @@ const CandyButton = (props: CandyButtonProps): JSX.Element => {
   ]);
 
   return (
-    <div>
-      {wallet && (
-        <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
-      )}
-
-      {wallet && <p>Balance: {(balance || 0).toLocaleString()} SOL</p>}
-
-      {wallet && <p>Total Available: {itemsAvailable}</p>}
-
-      {wallet && <p>Redeemed: {itemsRedeemed}</p>}
-
-      {wallet && <p>Remaining: {itemsRemaining}</p>}
-
-      <MintContainer>
-        {!wallet ? (
-          <ConnectButton>Connect Wallet</ConnectButton>
-        ) : (
-          <MintButton
-            disabled={isSoldOut || isMinting || !isActive}
-            onClick={onMint}
-            variant="contained"
-          >
-            {isSoldOut ? (
-              "SOLD OUT"
-            ) : isActive ? (
-              isMinting ? (
-                <CircularProgress />
-              ) : (
-                "MINT"
-              )
-            ) : (
-              <Countdown
-                date={startDate}
-                onMount={({ completed }) => completed && setIsActive(true)}
-                onComplete={() => setIsActive(true)}
-                renderer={renderCounter}
-              />
+    <Card>
+      <Container
+        fluid
+        className="py-4 px-2"
+        style={{
+          backgroundColor: "#bfc500",
+          borderRadius: "4px",
+        }}
+      >
+        <Row>
+          <Col className="my-auto ">
+            <h3
+              className="m-0 text-center"
+              style={{ fontWeight: 800, fontStyle: "italic", color: "#000" }}
+            >
+              BUY A DRAGON
+            </h3>
+          </Col>
+          <Col className="m-auto">
+            <p className="m-0 text-center" style={{ color: "#000" }}>
+              Connect your wallet to get started. Once you've successfully
+              connected, click on the mint to purchase.
+            </p>
+            {wallet && (
+              <Row className="py-5">
+                <Col className="col-4">
+                  <CandyStat label="Collection Size" value={itemsAvailable} />
+                </Col>
+                <Col className="col-4">
+                  <CandyStat label="# of NFTs Redeemed" value={itemsRedeemed} />
+                </Col>
+                <Col className="col-4">
+                  <CandyStat
+                    label="# of NFTs remaining"
+                    value={itemsRemaining}
+                  />
+                </Col>
+              </Row>
             )}
-          </MintButton>
-        )}
-      </MintContainer>
-    </div>
+          </Col>
+          <Col className="m-auto">
+            <Container fluid className="d-flex justify-content-center">
+              {!wallet ? (
+                <WalletDialogButton
+                  className="p-3"
+                  size="large"
+                  style={{
+                    backgroundColor: "#000",
+                    color: "#bfc500",
+                    fontWeight: 700,
+                  }}
+                >
+                  Connect Wallet
+                </WalletDialogButton>
+              ) : (
+                <Button
+                  disabled={isSoldOut || isMinting || !isActive}
+                  onClick={onMint}
+                  variant="contained"
+                >
+                  {isSoldOut ? (
+                    "SOLD OUT"
+                  ) : isActive ? (
+                    isMinting ? (
+                      <CircularProgress />
+                    ) : (
+                      "MINT"
+                    )
+                  ) : (
+                    <Countdown
+                      date={startDate}
+                      onMount={({ completed }) =>
+                        completed && setIsActive(true)
+                      }
+                      onComplete={() => setIsActive(true)}
+                      renderer={renderCounter}
+                    />
+                  )}
+                </Button>
+              )}
+            </Container>
+          </Col>
+        </Row>
+      </Container>
+    </Card>
   );
 };
 
