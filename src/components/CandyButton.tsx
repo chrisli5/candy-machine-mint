@@ -5,31 +5,25 @@ import {
   mintOneToken,
   shortenAddress,
 } from "../candy-machine";
-import { Button, CircularProgress } from "@material-ui/core";
+import toast from "react-hot-toast";
 import Countdown from "react-countdown";
-import styled from "styled-components";
-import { WalletDialogButton } from "@solana/wallet-adapter-material-ui";
 import * as anchor from "@project-serum/anchor";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { useAnchorWallet } from "@solana/wallet-adapter-react";
 import { LAMPORTS_PER_SOL } from "@solana/web3.js";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import Card from "../components/Card";
-import { AlertState } from "./AlertSnackbar";
+import Card from "./Card";
 import CandyStat from "./CandyStat";
-
-const CounterText = styled.span``; // add your styles here
+import Notification from "./Notification/Notification";
 
 export interface CandyButtonProps {
-  setAlertState: React.Dispatch<React.SetStateAction<AlertState>>;
-  setStartDate: React.Dispatch<React.SetStateAction<Date>>;
-  alertState: AlertState;
   candyMachineId: anchor.web3.PublicKey;
   config: anchor.web3.PublicKey;
   connection: anchor.web3.Connection;
   startDate: Date;
+  setStartDate: React.Dispatch<React.SetStateAction<Date>>;
   treasury: anchor.web3.PublicKey;
   txTimeout: number;
 }
@@ -42,7 +36,6 @@ const CandyButton = (props: CandyButtonProps): JSX.Element => {
   const [itemsAvailable, setItemsAvailable] = useState(0);
   const [itemsRedeemed, setItemsRedeemed] = useState(0);
   const [itemsRemaining, setItemsRemaining] = useState(0);
-  const [startDate, setStartDate] = useState(new Date(props.startDate));
 
   const wallet = useAnchorWallet();
   const [candyMachine, setCandyMachine] = useState<CandyMachine>();
@@ -68,7 +61,7 @@ const CandyButton = (props: CandyButtonProps): JSX.Element => {
       setItemsRedeemed(itemsRedeemed);
 
       setIsSoldOut(itemsRemaining === 0);
-      setStartDate(goLiveDate);
+      props.setStartDate(goLiveDate);
       setCandyMachine(candyMachine);
     })();
   };
@@ -93,16 +86,14 @@ const CandyButton = (props: CandyButtonProps): JSX.Element => {
         );
 
         if (!status?.err) {
-          props.setAlertState({
-            open: true,
-            message: "Congratulations! Mint succeeded!",
-            severity: "success",
+          onNotify({
+            message: "Minting successful!",
+            variant: "success",
           });
         } else {
-          props.setAlertState({
-            open: true,
-            message: "Mint failed! Please try again!",
-            severity: "error",
+          onNotify({
+            message: "Minting failed! Please try again!",
+            variant: "error",
           });
         }
       }
@@ -125,10 +116,9 @@ const CandyButton = (props: CandyButtonProps): JSX.Element => {
         }
       }
 
-      props.setAlertState({
-        open: true,
+      onNotify({
         message,
-        severity: "error",
+        variant: "error",
       });
     } finally {
       if (wallet) {
@@ -155,90 +145,27 @@ const CandyButton = (props: CandyButtonProps): JSX.Element => {
     props.connection,
   ]);
 
+  const onNotify = useCallback(
+    ({ message, variant }) =>
+      toast.custom(<Notification message={message} variant={variant} />),
+    []
+  );
+
   return (
     <Card>
-      <Container
-        fluid
-        className="py-4 px-2"
-        style={{
-          backgroundColor: "#bfc500",
-          borderRadius: "4px",
-        }}
-      >
-        <Row>
-          <Col className="my-auto ">
-            <h3
-              className="m-0 text-center"
-              style={{ fontWeight: 800, fontStyle: "italic", color: "#000" }}
-            >
-              BUY A DRAGON
-            </h3>
-          </Col>
-          <Col className="m-auto">
-            <p className="m-0 text-center" style={{ color: "#000" }}>
-              Connect your wallet to get started. Once you've successfully
-              connected, click on the mint to purchase.
-            </p>
-            {wallet && (
-              <Row className="py-5">
-                <Col className="col-4">
-                  <CandyStat label="Collection Size" value={itemsAvailable} />
-                </Col>
-                <Col className="col-4">
-                  <CandyStat label="# of NFTs Redeemed" value={itemsRedeemed} />
-                </Col>
-                <Col className="col-4">
-                  <CandyStat
-                    label="# of NFTs remaining"
-                    value={itemsRemaining}
-                  />
-                </Col>
-              </Row>
-            )}
-          </Col>
-          <Col className="m-auto">
-            <Container fluid className="d-flex justify-content-center">
-              {!wallet ? (
-                <WalletDialogButton
-                  className="p-3"
-                  size="large"
-                  style={{
-                    backgroundColor: "#000",
-                    color: "#bfc500",
-                    fontWeight: 700,
-                  }}
-                >
-                  Connect Wallet
-                </WalletDialogButton>
-              ) : (
-                <Button
-                  disabled={isSoldOut || isMinting || !isActive}
-                  onClick={onMint}
-                  variant="contained"
-                >
-                  {isSoldOut ? (
-                    "SOLD OUT"
-                  ) : isActive ? (
-                    isMinting ? (
-                      <CircularProgress />
-                    ) : (
-                      "MINT"
-                    )
-                  ) : (
-                    <Countdown
-                      date={startDate}
-                      onMount={({ completed }) =>
-                        completed && setIsActive(true)
-                      }
-                      onComplete={() => setIsActive(true)}
-                      renderer={renderCounter}
-                    />
-                  )}
-                </Button>
-              )}
-            </Container>
-          </Col>
-        </Row>
+      <Container fluid className="d-flex justify-content-center">
+        {wallet && (
+          <div
+            onClick={() =>
+              onNotify({
+                message: "test",
+                variant: "success",
+              })
+            }
+          >
+            Test
+          </div>
+        )}
       </Container>
     </Card>
   );
@@ -246,9 +173,9 @@ const CandyButton = (props: CandyButtonProps): JSX.Element => {
 
 const renderCounter = ({ days, hours, minutes, seconds, completed }: any) => {
   return (
-    <CounterText>
+    <p>
       {hours} hours, {minutes} minutes, {seconds} seconds
-    </CounterText>
+    </p>
   );
 };
 
