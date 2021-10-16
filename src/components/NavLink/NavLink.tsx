@@ -1,9 +1,10 @@
 import React from "react";
 import { NavHashLink } from "react-router-hash-link";
+import { BiHomeAlt } from "react-icons/bi";
 import "./NavLink.css";
 
 const NavLink = ({ to, children }) => (
-  <NavHashLink to={to} className="navlink">
+  <NavHashLink to={to} className="nav-link">
     {children}
   </NavHashLink>
 );
@@ -14,4 +15,11 @@ const Link = ({ href, children }) => (
   </a>
 );
 
-export { NavLink, Link };
+const NavIcon = ({ to, icon, children }) => (
+  <NavHashLink to={to} className="nav-icon" activeClassName="nav-icon--active">
+    {icon}
+    <p>{children}</p>
+  </NavHashLink>
+);
+
+export { NavLink, Link, NavIcon };
