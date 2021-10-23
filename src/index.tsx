@@ -1,12 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
+import Wallet from "./Wallet";
 import "./index.css";
-import Wallet from "./wallet";
 import reportWebVitals from "./reportWebVitals";
-
-require("@solana/wallet-adapter-react-ui/styles.css");
-require("./index.css");
 
 ReactDOM.render(
   <React.StrictMode>

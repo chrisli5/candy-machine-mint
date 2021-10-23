@@ -1,6 +1,6 @@
 import React from "react";
 
-const Provenance = () => {
+const Provenance = (): JSX.Element => {
   return <div>Provenance Page</div>;
 };
 

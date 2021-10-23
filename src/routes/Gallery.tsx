@@ -1,7 +1,5 @@
-import React from "react";
-
-const Gallery = () => {
-  return <div>Gallery Page</div>;
+const Gallery = (): JSX.Element => {
+  return <main></main>;
 };
 
 export default Gallery;

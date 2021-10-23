@@ -1,0 +1,47 @@
+.counter {
+  color: #5865f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border: 2px dotted #5865f2;
+  border-radius: 12px;
+  padding: 0 12px 18px 12px;
+  width: 100%;
+  max-width: 510px;
+}
+
+.counter__title {
+  position: relative;
+  bottom: 11px;
+  font-size: 18px;
+  padding: 0 8px;
+  text-transform: uppercase;
+  background-color: #fff;
+}
+
+.counter__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.counter__time,
+.counter__label {
+  width: 64px;
+  text-align: center;
+}
+
+.counter__time {
+  font-weight: 600;
+}
+
+.counter__label {
+  font-size: 12px;
+}
+
+.counter__colon {
+  width: 8px;
+}

@@ -1,16 +1,9 @@
-import React from "react";
-import { NavIcon } from "./NavLink/NavLink";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import {
-  BiHomeAlt,
-  BiRocket,
-  BiMapAlt,
-  BiCoinStack,
-  BiImageAlt,
-} from "react-icons/bi";
+import { NavIcon } from "./NavLink/NavLink";
+import { BiHomeAlt, BiMapAlt, BiCoinStack, BiImageAlt } from "react-icons/bi";
 
-const NavBottom = () => {
+const NavBottom = (): JSX.Element => {
   return (
     <Navbar
       className="p-1 d-md-none"
@@ -22,7 +15,7 @@ const NavBottom = () => {
     >
       <Nav fill justify className="w-100">
         <Nav.Item className="d-flex justify-content-center m-1">
-          <NavIcon to="/" icon={<BiHomeAlt />}>
+          <NavIcon to="/#home" icon={<BiHomeAlt />}>
             Home
           </NavIcon>
         </Nav.Item>
@@ -32,7 +25,7 @@ const NavBottom = () => {
           </NavIcon>
         </Nav.Item>
         <Nav.Item className="d-flex justify-content-center m-1">
-          <NavIcon to="/#buy" icon={<BiRocket />}>
+          <NavIcon to="/#buy" icon={<BiCoinStack />}>
             Buy
           </NavIcon>
         </Nav.Item>

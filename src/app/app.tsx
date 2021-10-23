@@ -1,19 +1,13 @@
-import { useState } from "react";
-import { useAnchorWallet } from "@solana/wallet-adapter-react";
-import {
-  WalletDisconnectButton,
-  WalletMultiButton,
-} from "@solana/wallet-adapter-react-ui";
 import { Route, Switch } from "react-router-dom";
 import * as anchor from "@project-serum/anchor";
-import Header from "../components/Header";
-
+import Container from "react-bootstrap/Container";
 import Home from "../routes/Home";
 import Gallery from "../routes/Gallery";
 import Provenance from "../routes/Provenance";
-import Container from "react-bootstrap/Container";
-
-import CandyButton from "../components/CandyButton";
+import Header from "../components/Header";
+import NavBottom from "../components/NavBottom";
+import "./app.css";
+import React from "react";
 
 const treasury = new anchor.web3.PublicKey(
   process.env.REACT_APP_TREASURY_ADDRESS!
@@ -34,13 +28,11 @@ const startDateSeed = parseInt(process.env.REACT_APP_CANDY_START_DATE!, 10);
 
 const txTimeout = 30000; // milliseconds (confirm this works for your project)
 
-const App = () => {
-  const wallet = useAnchorWallet();
+const App = (): JSX.Element => {
   return (
-    <Container className="mx-auto" style={{ maxWidth: "1200px" }}>
-      <WalletMultiButton />
-      {wallet && <WalletDisconnectButton />}
+    <Container className="app__container">
       <Header />
+      <NavBottom />
       <Switch>
         <Route exact path="/">
           <Home

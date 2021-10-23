@@ -1,6 +1,7 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
 
-const Line = () => <div style={{ borderBottom: "1px solid #3b3b3b" }} />;
+const Line = (): JSX.Element => (
+  <div className="d-md-none" style={{ borderBottom: "1px solid #ddd" }} />
+);
 
 export default Line;

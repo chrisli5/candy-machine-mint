@@ -1,23 +1,15 @@
 .link,
-.nav-link {
-  color: #fff;
+.navlink {
+  color: #000;
   font-size: 12px;
-  font-style: italic;
-  font-weight: 500;
-  caret-color: transparent;
   transition: 0.15s;
   text-decoration: none;
   text-transform: uppercase;
 }
 
+.navlink:hover,
 .link:hover,
-.nav-link:hover {
-  color: #bfc500;
-}
-
-.link:active,
-.nav-link:active {
-  color: #bfc500;
+.navlink--active {
 }
 
 .nav-icon {
@@ -40,5 +32,5 @@
 
 .nav-icon--active {
   background-color: rgb(239, 244, 245);
-  font-weight: 600;
+  font-weight: 500;
 }

@@ -1,0 +1,88 @@
+.tracker {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border: 2px dotted #5865f2;
+  border-radius: 12px;
+  padding: 0 12px 12px 12px;
+  width: 100%;
+  max-width: 510px;
+}
+
+.tracker__title {
+  color: #5865f2;
+  position: relative;
+  bottom: 11px;
+  font-size: 18px;
+  padding: 0 8px;
+  text-transform: uppercase;
+  background-color: #fff;
+}
+
+.tracker__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.tracker__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 72px;
+  padding: 4px 0;
+  border: 2px dotted #5865f2;
+  border-radius: 12px;
+}
+
+.tracker__value {
+  color: #5865f2;
+  font-size: 24px;
+  text-align: center;
+}
+
+.tracker__label {
+  color: #4f545c;
+  line-height: 1.6;
+  font-size: 12px;
+  text-align: center;
+}
+
+.tracker__button {
+  padding-top: 12px;
+  width: 100%;
+}
+
+@media only screen and (min-width: 425px) {
+  .tracker__row {
+    padding: 0 24px 0 24px;
+  }
+
+  .tracker__button {
+    padding: 12px 24px 0 24px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .tracker__row {
+    padding: 0 64px 0 64px;
+  }
+
+  .tracker__button {
+    padding: 12px 64px 0 64px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .tracker__row {
+    padding: 0 24px 0 24px;
+  }
+
+  .tracker__button {
+    padding: 12px 24px 0 24px;
+  }
+}

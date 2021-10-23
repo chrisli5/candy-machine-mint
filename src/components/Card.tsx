@@ -1,8 +1,14 @@
-import React from "react";
-import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
 
-const Card = ({ children }) => (
-  <Container className="py-5 px-1">{children}</Container>
+interface CardProps {
+  children: React.ReactNode;
+  id: string;
+}
+
+const Card = (props: CardProps): JSX.Element => (
+  <Row id={props.id} className="py-5 px-2">
+    {props.children}
+  </Row>
 );
 
 export default Card;

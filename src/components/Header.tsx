@@ -1,42 +1,43 @@
-import React from "react";
 import { NavLink, Link } from "./NavLink/NavLink";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Image from "react-bootstrap/Image";
+import logoFull from "../images/bayc-logo-z.png";
+import logo from "../images/bayc-logo-z-cr.png";
+import { HeaderButton } from "./Buttons/Buttons";
 
-export default (props) => (
-  <Navbar expand="md" variant="dark">
-    <Container>
-      <Navbar.Brand href="#home">
+export default (): JSX.Element => (
+  <Navbar
+    variant="light"
+    fixed="top"
+    style={{
+      backgroundColor: "#fff",
+      borderBottom: "1px solid #ddd",
+    }}
+  >
+    <Container className="px-md-3" style={{ maxWidth: "1200px" }}>
+      <Navbar.Brand>
         <Image
-          src="../images/bayc-logo-z.png"
-          style={{ width: "195px", height: "75px" }}
+          src={logo}
+          className="d-md-none"
+          style={{ width: "32px", height: "32px" }}
+        />
+        <Image
+          src={logoFull}
+          className="d-none d-md-inline"
+          style={{ width: "156px", height: "60px" }}
         />
       </Navbar.Brand>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav fill className="w-100">
-          <Nav.Item className="d-flex justify-content-end my-auto">
-            <NavLink to="/">Home</NavLink>
-          </Nav.Item>
-          <Nav.Item className="d-flex justify-content-end my-auto">
-            <NavLink to="/#buy">Buy a Drago</NavLink>
-          </Nav.Item>
-          <Nav.Item className="d-flex justify-content-end my-auto">
-            <NavLink to="/#roadmap">Roadmap</NavLink>
-          </Nav.Item>
-          <Nav.Item className="d-flex justify-content-end my-auto">
-            <NavLink to="/#team">Team</NavLink>
-          </Nav.Item>
-          <Nav.Item className="d-flex justify-content-end my-auto">
-            <NavLink to="/gallery">Collection</NavLink>
-          </Nav.Item>
-          <Nav.Item className="d-flex justify-content-end my-auto">
-            <Link href="http://discord.com">Discord</Link>
-          </Nav.Item>
-        </Nav>
-      </Navbar.Collapse>
+      <Nav className="d-none d-md-inline-flex me-auto">
+        <NavLink to="/#home">home</NavLink>
+        <NavLink to="/gallery">gallery</NavLink>
+        <NavLink to="/#buy">buy</NavLink>
+        <NavLink to="/#roadmap">roadmap</NavLink>
+        <NavLink to="/#team">team</NavLink>
+        <Link href="https://discord.gg/HUa4jd2Km5">Discord</Link>
+      </Nav>
+      <HeaderButton />
     </Container>
   </Navbar>
 );
