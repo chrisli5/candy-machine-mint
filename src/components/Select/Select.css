@@ -1,0 +1,21 @@
+.gallery__select {
+  text-align: justify;
+  color: var(--paragraph);
+  font-size: var(--small);
+  background-color: var(--background);
+}
+
+.select__header {
+  margin: 0;
+  padding: 8px 0;
+}
+
+.select__ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.select__li {
+  padding: 8px 0;
+}

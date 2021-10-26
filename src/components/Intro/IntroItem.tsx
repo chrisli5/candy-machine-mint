@@ -5,8 +5,8 @@ interface IntroItemProps {
 }
 
 const IntroItem = (props: IntroItemProps): JSX.Element => (
-  <Col xs={4} className="px-1">
-    <Image src={props.src} fluid />
+  <Col xs={6} className="px-1">
+    <Image src={props.src} fluid style={{ borderRadius: "8px" }} />
   </Col>
 );
 

@@ -1,5 +1,13 @@
 .paragraph {
   text-align: justify;
-  color: #4f545c;
+  color: var(--paragraph);
+  font-size: var(--small);
   line-height: 1.6;
+}
+
+@media only screen and (min-width: 768px) {
+  .paragraph {
+    font-size: var(--large);
+    line-height: 1.8;
+  }
 }

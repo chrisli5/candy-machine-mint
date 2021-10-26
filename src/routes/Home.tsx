@@ -27,7 +27,7 @@ import Counter from "../components/Counter/Counter";
 import Tracker from "../components/Tracker/Tracker";
 import { WalletButton } from "../components/Buttons/Buttons";
 import MintButton from "../components/Buttons/MintButton";
-import imageFox from "../images/orangefox1.png";
+import imageFox from "../images/base/OrangeFox.png";
 
 export interface HomeProps {
   candyMachineId: anchor.web3.PublicKey;
@@ -174,12 +174,18 @@ const Home = (props: HomeProps): JSX.Element => {
       <Intro />
       <Line />
       <Purchase>
-        <Col xs={12} lg={4} className="offset-lg-1 d-flex-column">
-          <div className="d-flex mb-3">
+        <Col
+          xs={12}
+          lg={4}
+          style={{ borderRadius: "20px" }}
+          className="px-3 offset-lg-1 d-flex-column"
+        >
+          <div className="d-flex">
             <Image
               src={imageFox}
-              className="m-auto"
               style={{ width: "200px" }}
+              className="m-auto"
+              fluid
             />
           </div>
           {isActive ? (

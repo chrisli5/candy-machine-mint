@@ -12,8 +12,7 @@ export default (): JSX.Element => (
     variant="light"
     fixed="top"
     style={{
-      backgroundColor: "#fff",
-      borderBottom: "1px solid #ddd",
+      backgroundColor: "var(--background)",
     }}
   >
     <Container className="px-md-3" style={{ maxWidth: "1200px" }}>
@@ -30,9 +29,9 @@ export default (): JSX.Element => (
         />
       </Navbar.Brand>
       <Nav className="d-none d-md-inline-flex me-auto">
-        <NavLink to="/#home">home</NavLink>
+        <NavLink to="/#intro">home</NavLink>
         <NavLink to="/gallery">gallery</NavLink>
-        <NavLink to="/#buy">buy</NavLink>
+        <NavLink to="/#purchase">Purchase</NavLink>
         <NavLink to="/#roadmap">roadmap</NavLink>
         <NavLink to="/#team">team</NavLink>
         <Link href="https://discord.gg/HUa4jd2Km5">Discord</Link>

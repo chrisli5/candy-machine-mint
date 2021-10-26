@@ -2,9 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #5865f2;
-  text-transform: uppercase;
+  color: var(--headline);
   text-align: center;
+  font-weight: 700;
 }
 
 @media (min-width: 576px) {
@@ -12,8 +12,9 @@
     content: " ";
     flex-grow: 1;
     height: 2px;
-    opacity: 0.6;
+    opacity: 0.5;
     margin-left: 12px;
-    background-color: #5865f2;
+    margin-top: 8px;
+    background-color: var(--headline);
   }
 }

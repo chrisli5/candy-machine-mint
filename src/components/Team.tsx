@@ -4,6 +4,8 @@ import Image from "react-bootstrap/Image";
 import Title from "./Text/Title";
 import Card from "./Card";
 import Paragraph from "./Text/Paragraph";
+import fox3 from "../images/3.png";
+import fox5 from "../images/5.png";
 
 const Team = (): JSX.Element => (
   <Card id="team">
@@ -20,20 +22,12 @@ const Team = (): JSX.Element => (
       <p>peng guo - artist and creative director.</p>
     </Col>
     <Col xs={12} lg={4} className="my-lg-auto offset-lg-1">
-      <Row className="pb-1">
+      <Row>
         <Col className="pe-1">
-          <Image src="../images/ape1.png" fluid />
+          <Image src={fox5} style={{ borderRadius: "8px" }} fluid />
         </Col>
         <Col className="ps-1">
-          <Image src="../images/ape2.png" fluid />
-        </Col>
-      </Row>
-      <Row className="pt-1">
-        <Col className="pe-1">
-          <Image src="../images/ape1.png" fluid />
-        </Col>
-        <Col className="ps-1">
-          <Image src="../images/ape2.png" fluid />
+          <Image src={fox3} style={{ borderRadius: "8px" }} fluid />
         </Col>
       </Row>
     </Col>

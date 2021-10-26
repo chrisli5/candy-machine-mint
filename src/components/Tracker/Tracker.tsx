@@ -1,4 +1,6 @@
 import "./Tracker.css";
+import Image from "react-bootstrap/Image";
+import imageFox from "../../images/orangefox1.png";
 
 interface TrackerProps {
   itemsRedeemed: number;
@@ -9,7 +11,6 @@ interface TrackerProps {
 
 const Tracker = (props: TrackerProps): JSX.Element => (
   <div className="tracker">
-    <h2 className="tracker__title">Fox Adoption Center</h2>
     <div className="tracker__row">
       <div className="tracker__item">
         <div className="tracker__value">{props.itemsAvailable}</div>
@@ -17,7 +18,7 @@ const Tracker = (props: TrackerProps): JSX.Element => (
       </div>
       <div className="tracker__item">
         <div className="tracker__value">{props.itemsRedeemed}</div>
-        <div className="tracker__label">Sold</div>
+        <div className="tracker__label">Adopted</div>
       </div>
       <div className="tracker__item">
         <div className="tracker__value">{props.itemsRemaining}</div>

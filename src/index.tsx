@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import Wallet from "./Wallet";
+import "./fonts/ProximaNova/proxima-nova.css";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 

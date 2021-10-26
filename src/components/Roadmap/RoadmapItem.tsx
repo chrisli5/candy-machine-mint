@@ -4,7 +4,7 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
-import Typography from "@mui/material/Typography";
+import "./Roadmap.css";
 
 interface RoadmapItemProps {
   title?: string;
@@ -17,7 +17,7 @@ const RoadmapItem = (props: RoadmapItemProps): JSX.Element => {
   return (
     <TimelineItem>
       <TimelineOppositeContent color={"text.secondary"}>
-        <Typography variant="body1">{props.percent}%</Typography>
+        <span className="roadmap__percent">{props.percent}%</span>
       </TimelineOppositeContent>
       <TimelineSeparator>
         <TimelineDot
@@ -29,10 +29,8 @@ const RoadmapItem = (props: RoadmapItemProps): JSX.Element => {
         />
       </TimelineSeparator>
       <TimelineContent>
-        <Typography variant="h6" component="span">
-          {props.title}
-        </Typography>
-        <Typography variant="body2">{props.children}</Typography>
+        <p className="roadmap__title">{props.title}</p>
+        <p className="roadmap__p">{props.children}</p>
       </TimelineContent>
     </TimelineItem>
   );

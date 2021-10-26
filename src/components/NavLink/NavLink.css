@@ -1,15 +1,17 @@
 .link,
 .navlink {
-  color: #000;
-  font-size: 12px;
+  color: var(--paragraph);
+  font-size: 14px;
+  font-weight: 600;
   transition: 0.15s;
   text-decoration: none;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .navlink:hover,
 .link:hover,
 .navlink--active {
+  color: var(--headline);
 }
 
 .nav-icon {

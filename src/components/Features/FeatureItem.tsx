@@ -9,9 +9,13 @@ interface FeatureItemProps {
 const FeatureItem = (props: FeatureItemProps): JSX.Element => (
   <Col>
     <div className="d-flex" style={{ height: "175px" }}>
-      <Image src={props.src} className="m-auto" style={{ width: "100px" }} />
+      <Image
+        src={props.src}
+        className="m-auto"
+        style={{ width: "100px", borderRadius: "8px" }}
+      />
     </div>
-    <p className="text-center m-0">{props.text}</p>
+    <p className="feature__p text-center">{props.text}</p>
   </Col>
 );
 export default FeatureItem;

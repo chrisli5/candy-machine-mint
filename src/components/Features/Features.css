@@ -1,0 +1,9 @@
+.feature__p {
+  font-size: var(--small);
+}
+
+@media only screen and (min-width: 768px) {
+  .feature__p {
+    font-size: var(--medium);
+  }
+}

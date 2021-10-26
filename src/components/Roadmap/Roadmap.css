@@ -1,0 +1,29 @@
+.roadmap__p {
+  color: var(--paragraph);
+  font-size: var(--small);
+  line-height: 1.5;
+  margin: 4px 0 0 0;
+}
+
+.roadmap__percent {
+  margin: 0;
+  color: var(--paragraph);
+  font-size: var(--medium);
+}
+
+.roadmap__title {
+  margin: 0;
+  font-weight: bold;
+  color: var(--headline);
+}
+
+@media only screen and (min-width: 768px) {
+  .roadmap__p {
+    font-size: var(--medium);
+    line-height: 1.6;
+  }
+
+  .roadmap__percent {
+    font-size: var(--large);
+  }
+}

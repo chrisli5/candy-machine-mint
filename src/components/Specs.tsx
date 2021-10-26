@@ -3,6 +3,7 @@ import Image from "react-bootstrap/Image";
 import Card from "./Card";
 import Title from "./Text/Title";
 import Paragraph from "./Text/Paragraph";
+import fox4 from "../images/4.png";
 
 const Specs = (): JSX.Element => (
   <Card id="Specifications">
@@ -24,7 +25,7 @@ const Specs = (): JSX.Element => (
       </Paragraph>
     </Col>
     <Col xs={12} lg={4} className="my-lg-auto offset-lg-1">
-      <Image src="../images/mystery-ape.gif" fluid />
+      <Image src={fox4} fluid style={{ borderRadius: "8px" }} />
     </Col>
   </Card>
 );

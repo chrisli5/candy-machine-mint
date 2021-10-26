@@ -6,7 +6,8 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "ProximaNova", "Roboto", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
   font-size: 16px;
   font-weight: 600;
   height: 50px;
@@ -16,9 +17,8 @@
 
 .wallet-adapter-button-trigger {
   background-color: #ff6e6c;
+  color: #fffffe;
   height: 36px;
-  font-weight: 500;
-  box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
   transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
 }
 

@@ -4,6 +4,10 @@ import Title from "../Text/Title";
 import Card from "../Card";
 import FeatureItem from "./FeatureItem";
 import Paragraph from "../Text/Paragraph";
+import imageFox1 from "../../images/1.png";
+import imageFox2 from "../../images/2.png";
+import imageFox3 from "../../images/3.png";
+import imageFox4 from "../../images/4.png";
 
 const Features = (): JSX.Element => {
   return (
@@ -11,30 +15,28 @@ const Features = (): JSX.Element => {
       <Title>Rewards & Features</Title>
       <Col xs={12}>
         <Paragraph>
-          When you buy a Bored Ape, you’re not simply buying an avatar or a
-          provably-rare piece of art. You are gaining membership access to a
-          club whose benefits and offerings will increase over time. Your Bored
-          Ape can serve as your digital identity, and open digital doors for
-          you.
+          Adopting a Kyubi not only grants you access and ownership rights to an
+          amazingly cute fox, but also additional rewards through roadmap
+          activations and community events.
         </Paragraph>
       </Col>
       <Col xs={12}>
         <Row className="my-auto">
           <FeatureItem
-            src="../../images/icon1.png"
-            text="5,000 provably rare dragon NFTs."
+            src={imageFox1}
+            text="5,000 provably rare Kyubit NFTs."
           />
           <FeatureItem
-            src="../../images/icon2.png"
+            src={imageFox2}
             text="Gain additional rewards through roadmap activations."
           />
           <FeatureItem
-            src="../../images/icon3.png"
-            text="Tiered assets with varying rarity."
+            src={imageFox3}
+            text="Tiered assets with a wide range of rarities."
           />
           <FeatureItem
-            src="../../images/icon4.png"
-            text="5,000 provably rare dragon NFTs."
+            src={imageFox4}
+            text="Earn passive rewards as you hold."
           />
         </Row>
       </Col>
