@@ -11,9 +11,11 @@
 }
 
 .tracker__title {
-  color: var(--headline);
-  font-size: var(--large);
+  font-weight: 700;
+  font-size: var(--font-size-3);
+  color: var(--primary-headline);
   padding: 0 8px;
+  text-align: center;
   text-transform: capitalize;
 }
 
@@ -32,17 +34,16 @@
   width: 72px;
   padding: 4px 0;
   border-radius: 12px;
+  color: var(--primary-paragraph);
 }
 
 .tracker__value {
-  color: var(--headline);
   font-size: 24px;
   text-align: center;
 }
 
 .tracker__label {
-  color: var(--paragraph);
-  line-height: 1.6;
+  line-height: 1.5;
   font-size: var(--xsmall);
   text-align: center;
 }
@@ -53,31 +54,10 @@
 }
 
 @media only screen and (min-width: 425px) {
-  .tracker__row {
-    padding: 0 24px 0 24px;
-  }
-
-  .tracker__button {
-    padding: 12px 24px 0 24px;
-  }
 }
 
 @media only screen and (min-width: 768px) {
-  .tracker__row {
-    padding: 0 64px 0 64px;
-  }
-
-  .tracker__button {
-    padding: 12px 64px 0 64px;
-  }
 }
 
 @media only screen and (min-width: 992px) {
-  .tracker__row {
-    padding: 0 24px 0 24px;
-  }
-
-  .tracker__button {
-    padding: 12px 0 0 0;
-  }
 }

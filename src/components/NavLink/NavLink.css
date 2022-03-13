@@ -1,17 +1,15 @@
-.link,
 .navlink {
-  color: var(--paragraph);
-  font-size: 14px;
+  font-size: var(--small);
   font-weight: 600;
   transition: 0.15s;
   text-decoration: none;
   text-transform: capitalize;
+  color: var(--primary-paragraph);
 }
 
-.navlink:hover,
-.link:hover,
-.navlink--active {
-  color: var(--headline);
+.navlink--active,
+.navlink:hover {
+  color: var(--primary-headline);
 }
 
 .nav-icon {
@@ -23,16 +21,13 @@
   border-radius: 12px;
   padding: 4px 12px;
   width: 64px;
-  font-weight: 400;
 }
 
 .nav-icon p {
-  font-size: 10px;
+  font-size: 11px;
   line-height: 1.5;
   margin: 0;
 }
 
 .nav-icon--active {
-  background-color: rgb(239, 244, 245);
-  font-weight: 500;
 }

@@ -30,7 +30,7 @@ const txTimeout = 30000; // milliseconds (confirm this works for your project)
 
 const App = (): JSX.Element => {
   return (
-    <Container className="app__container">
+    <div>
       <Header />
       <NavBottom />
       <Switch>
@@ -51,7 +51,7 @@ const App = (): JSX.Element => {
           <Provenance />
         </Route>
       </Switch>
-    </Container>
+    </div>
   );
 };
 

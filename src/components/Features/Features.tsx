@@ -4,17 +4,18 @@ import Title from "../Text/Title";
 import Card from "../Card";
 import FeatureItem from "./FeatureItem";
 import Paragraph from "../Text/Paragraph";
-import imageFox1 from "../../images/1.png";
-import imageFox2 from "../../images/2.png";
-import imageFox3 from "../../images/3.png";
-import imageFox4 from "../../images/4.png";
+import imageFox1 from "../../images/icons/camera.png";
+import imageFox2 from "../../images/icons/tophat.png";
+import imageFox3 from "../../images/icons/luggage.png";
+import imageFox4 from "../../images/icons/snail.png";
+import imageFox5 from "../../images/icons/rocket.png";
 
 const Features = (): JSX.Element => {
   return (
-    <Card id="features">
-      <Title>Rewards & Features</Title>
+    <Card id="features" secondary>
+      <Title secondary>Rewards & Features</Title>
       <Col xs={12}>
-        <Paragraph>
+        <Paragraph secondary>
           Adopting a Kyubi not only grants you access and ownership rights to an
           amazingly cute fox, but also additional rewards through roadmap
           activations and community events.
@@ -36,6 +37,10 @@ const Features = (): JSX.Element => {
           />
           <FeatureItem
             src={imageFox4}
+            text="Earn passive rewards as you hold."
+          />
+          <FeatureItem
+            src={imageFox5}
             text="Earn passive rewards as you hold."
           />
         </Row>

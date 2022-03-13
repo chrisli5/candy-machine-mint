@@ -1,7 +1,12 @@
 import React from "react";
-
-const Line = (): JSX.Element => (
-  <div className="d-md-none" style={{ borderBottom: "1px solid #ddd" }} />
+interface LineProps {
+  show?: boolean;
+}
+const Line = (props: LineProps): JSX.Element => (
+  <div
+    className={props.show ? "d-block" : "d-md-none"}
+    style={{ borderBottom: "2px solid var(--primary-bg)", opacity: 0.5 }}
+  />
 );
 
 export default Line;

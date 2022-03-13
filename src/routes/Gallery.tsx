@@ -1,77 +1,111 @@
 import { useState } from "react";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import Accordion from "react-bootstrap/Accordion";
 import Image from "react-bootstrap/Image";
 import AccordionSelect from "../components/Select/Select";
-import skin1 from "../images/base/OrangeFox.png";
-import skin2 from "../images/base/BlueFox.png";
-import hat1 from "../images/hat/CrabHat.png";
-import shirt1 from "../images/clothing/DivingSuit.png";
+import imageStore from "../components/images";
 import "./Gallery.css";
+import { ResetButton } from "../components/Buttons/Buttons";
 
-const initialSkin = { name: "Skin", value: skin1 };
-const skins = [
-  { name: "Orange", value: skin1 },
-  { name: "Blue", value: skin2 },
-];
-
-const initialHat = { name: "Hat", value: hat1 };
-const hats = [{ name: "Crab", value: hat1 }];
+const initialBackground = {
+  name: "Background",
+  value: imageStore["backgrounds"][0].value,
+};
+const initialBase = {
+  name: "Base",
+  value: imageStore["bases"][0].value,
+};
+const initialHat = {
+  name: "Hat",
+  value: imageStore["hats"][0].value,
+};
+const initialClothing = {
+  name: "Clothing",
+  value: imageStore["clothing"][0].value,
+};
+const initialItem = {
+  name: "Item",
+  value: imageStore["items"][0].value,
+};
 
 const Gallery = (): JSX.Element => {
-  const [skin, setSkin] = useState({
-    name: "Skin",
-    value: skin1,
-  });
-  const [hat, setHat] = useState(hats[0]);
-  const [shirt, setShirt] = useState(shirt1);
-
-  const handleSkin = (base) => {
-    setSkin(base);
-  };
-
-  const handleHat = (hat) => {
-    setHat(hat);
-  };
+  const [background, setBackground] = useState(initialBackground);
+  const [base, setBase] = useState(initialBase);
+  const [hat, setHat] = useState(initialHat);
+  const [clothing, setClothing] = useState(initialClothing);
+  const [item, setItem] = useState(initialItem);
 
   const resetAll = () => {
+    setBackground(initialBackground);
+    setBase(initialBase);
     setHat(initialHat);
-    setSkin(initialSkin);
+    setClothing(initialClothing);
+    setItem(initialItem);
   };
 
   return (
     <main className="mt-5 pt-4 pt-md-5 px-2">
-      <Accordion
-        style={{
-          border: "1px solid var(--paragraph)",
-          borderRadius: "8px",
-          padding: "8px",
-          width: "350px",
-          marginBottom: "12px",
-        }}
-      >
-        <AccordionSelect
-          ariaLabel="Skins"
-          initialOption={skin}
-          onChange={handleSkin}
-          optionList={skins}
-          eventKey="0"
-        />
-        <AccordionSelect
-          ariaLabel="Hats"
-          initialOption={hat}
-          onChange={handleHat}
-          optionList={hats}
-          eventKey="1"
-        />
-      </Accordion>
-      <button onClick={resetAll}>Reset Filters</button>
-
-      <div>
-        <Image src={skin.value} className="imageLayer" />
-        <Image src={shirt} className="imageLayer" />
-        <Image src={hat.value} className="imageLayer" />
-      </div>
-      <div style={{ height: "1000px" }} />
+      <Row className="d-flex justify-content-center">
+        <Col xs={12} md={5}>
+          <h2 className="gallery__header">Gallery</h2>
+          <Accordion id="gallery__accordion">
+            <AccordionSelect
+              ariaLabel="Backgrounds"
+              selected={background}
+              onChange={setBackground}
+              optionList={imageStore["backgrounds"]}
+              eventKey="0"
+            />
+            <AccordionSelect
+              ariaLabel="Bases"
+              selected={base}
+              onChange={setBase}
+              optionList={imageStore["bases"]}
+              eventKey="1"
+            />
+            <AccordionSelect
+              ariaLabel="Clothing"
+              selected={clothing}
+              onChange={setClothing}
+              optionList={imageStore["clothing"]}
+              eventKey="2"
+            />
+            <AccordionSelect
+              ariaLabel="Items"
+              selected={item}
+              onChange={setItem}
+              optionList={imageStore["items"]}
+              eventKey="3"
+            />
+            <AccordionSelect
+              ariaLabel="Hats"
+              selected={hat}
+              onChange={setHat}
+              optionList={imageStore["hats"]}
+              eventKey="4"
+            />
+          </Accordion>
+          <div className="reset__container">
+            <ResetButton onClick={resetAll} />
+          </div>
+        </Col>
+        <Col md={1} />
+        <Col xs={12} md={5}>
+          <div className="images__container">
+            <Image
+              src={background.value}
+              className="imageLayer"
+              style={{ borderRadius: "12px" }}
+              fluid
+            />
+            <Image src={base.value} className="imageLayer" fluid />
+            <Image src={clothing.value} className="imageLayer" fluid />
+            <Image src={item.value} className="imageLayer" fluid />
+            <Image src={hat.value} className="imageLayer" fluid />
+          </div>
+        </Col>
+      </Row>
     </main>
   );
 };

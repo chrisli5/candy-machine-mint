@@ -1,0 +1,24 @@
+.card__primary {
+  background-color: var(--primary-bg);
+}
+
+.card__secondary {
+  background-color: var(--secondary-bg);
+}
+
+.home__card {
+  padding-top: var(--space-size-4);
+  padding-bottom: var(--space-size-4);
+}
+
+.card__body {
+  max-width: 1200px;
+  margin: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .home__card {
+    padding-top: var(--space-size-6);
+    padding-bottom: var(--space-size-6);
+  }
+}

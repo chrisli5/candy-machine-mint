@@ -1,9 +1,4 @@
-.feature__p {
-  font-size: var(--small);
-}
-
-@media only screen and (min-width: 768px) {
-  .feature__p {
-    font-size: var(--medium);
-  }
+.feature__text {
+  font-size: var(--font-size-1);
+  color: var(--secondary-paragraph);
 }

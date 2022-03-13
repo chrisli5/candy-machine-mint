@@ -3,8 +3,8 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Image from "react-bootstrap/Image";
-import logoFull from "../images/bayc-logo-z.png";
-import logo from "../images/bayc-logo-z-cr.png";
+import logoFull from "../images/newestlogo.png";
+import logo from "../images/logo_3.png";
 import { HeaderButton } from "./Buttons/Buttons";
 
 export default (): JSX.Element => (
@@ -12,10 +12,10 @@ export default (): JSX.Element => (
     variant="light"
     fixed="top"
     style={{
-      backgroundColor: "var(--background)",
+      backgroundColor: "var(--primary-bg)",
     }}
   >
-    <Container className="px-md-3" style={{ maxWidth: "1200px" }}>
+    <Container className="px-md-3 py-md-1" style={{ maxWidth: "1200px" }}>
       <Navbar.Brand>
         <Image
           src={logo}
@@ -25,7 +25,7 @@ export default (): JSX.Element => (
         <Image
           src={logoFull}
           className="d-none d-md-inline"
-          style={{ width: "156px", height: "60px" }}
+          style={{ width: "129px", height: "48px" }}
         />
       </Navbar.Brand>
       <Nav className="d-none d-md-inline-flex me-auto">

@@ -2,19 +2,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--headline);
   text-align: center;
   font-weight: 700;
+  font-size: var(--font-size-3);
 }
 
-@media (min-width: 576px) {
-  .title::after {
-    content: " ";
-    flex-grow: 1;
-    height: 2px;
-    opacity: 0.5;
-    margin-left: 12px;
-    margin-top: 8px;
-    background-color: var(--headline);
+.title__primary {
+  color: var(--primary-headline);
+}
+
+.title__secondary {
+  color: var(--secondary-headline);
+}
+
+@media only screen and (min-width: 768px) {
+  .title {
+    justify-content: flex-start;
+    text-align: start;
+    font-size: var(--font-size-4);
   }
 }

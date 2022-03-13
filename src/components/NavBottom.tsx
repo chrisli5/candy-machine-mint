@@ -9,8 +9,7 @@ const NavBottom = (): JSX.Element => {
       className="p-1 d-md-none"
       fixed="bottom"
       style={{
-        borderTop: "1px solid rgb(231, 227, 235)",
-        backgroundColor: "#fff",
+        backgroundColor: "var(--primary-bg)",
       }}
     >
       <Nav fill justify className="w-100">
@@ -25,8 +24,8 @@ const NavBottom = (): JSX.Element => {
           </NavIcon>
         </Nav.Item>
         <Nav.Item className="d-flex justify-content-center m-1">
-          <NavIcon to="/#buy" icon={<BiCoinStack />}>
-            Buy
+          <NavIcon to="/#purchase" icon={<BiCoinStack />}>
+            Purchase
           </NavIcon>
         </Nav.Item>
         <Nav.Item className="d-flex justify-content-center m-1">

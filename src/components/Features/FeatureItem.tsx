@@ -1,5 +1,6 @@
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
+import "./Features.css";
 
 interface FeatureItemProps {
   src: string;
@@ -15,7 +16,7 @@ const FeatureItem = (props: FeatureItemProps): JSX.Element => (
         style={{ width: "100px", borderRadius: "8px" }}
       />
     </div>
-    <p className="feature__p text-center">{props.text}</p>
+    <p className="feature__text text-center">{props.text}</p>
   </Col>
 );
 export default FeatureItem;

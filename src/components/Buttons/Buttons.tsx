@@ -10,4 +10,14 @@ const WalletButton = (): JSX.Element => (
   <WalletModalButton style={{ width: "100%" }} />
 );
 
-export { HeaderButton, WalletButton };
+interface ResetButtonProps {
+  onClick: () => void;
+}
+
+const ResetButton = (props: ResetButtonProps): JSX.Element => (
+  <button id="reset-button" onClick={props.onClick}>
+    Reset Filters
+  </button>
+);
+
+export { HeaderButton, WalletButton, ResetButton };

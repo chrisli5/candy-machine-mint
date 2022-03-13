@@ -28,6 +28,7 @@ import Tracker from "../components/Tracker/Tracker";
 import { WalletButton } from "../components/Buttons/Buttons";
 import MintButton from "../components/Buttons/MintButton";
 import imageFox from "../images/base/OrangeFox.png";
+import box2 from "../images/box2.png";
 
 export interface HomeProps {
   candyMachineId: anchor.web3.PublicKey;
@@ -172,7 +173,7 @@ const Home = (props: HomeProps): JSX.Element => {
     <main>
       <Hero />
       <Intro />
-      <Line />
+      <Specs />
       <Purchase>
         <Col
           xs={12}
@@ -180,9 +181,10 @@ const Home = (props: HomeProps): JSX.Element => {
           style={{ borderRadius: "20px" }}
           className="px-3 offset-lg-1 d-flex-column"
         >
+          <h3 className="tracker__title">Fox Adoption Center</h3>
           <div className="d-flex">
             <Image
-              src={imageFox}
+              src={box2}
               style={{ width: "200px" }}
               className="m-auto"
               fluid
@@ -215,15 +217,9 @@ const Home = (props: HomeProps): JSX.Element => {
           )}
         </Col>
       </Purchase>
-      <Line />
       <Features />
-      <Line />
-      <Specs />
-      <Line />
       <Roadmap percentSold={percentSold} />
-      <Line />
       <Team />
-      <Line />
       <Footer />
     </main>
   );

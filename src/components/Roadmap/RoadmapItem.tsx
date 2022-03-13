@@ -30,7 +30,7 @@ const RoadmapItem = (props: RoadmapItemProps): JSX.Element => {
       </TimelineSeparator>
       <TimelineContent>
         <p className="roadmap__title">{props.title}</p>
-        <p className="roadmap__p">{props.children}</p>
+        <p className="roadmap__text">{props.children}</p>
       </TimelineContent>
     </TimelineItem>
   );

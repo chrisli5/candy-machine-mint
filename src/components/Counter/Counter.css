@@ -1,11 +1,10 @@
 .counter {
-  color: var(--headline);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: auto;
-  border: 2px dotted var(--border);
+  border: 2px dotted black;
   border-radius: 12px;
   padding: 0 12px 18px 12px;
   width: 100%;
@@ -18,7 +17,6 @@
   font-size: var(--large);
   padding: 0 8px;
   text-transform: capitalize;
-  background-color: var(--background);
 }
 
 .counter__container {

@@ -1,29 +1,15 @@
-.roadmap__p {
-  color: var(--paragraph);
-  font-size: var(--small);
-  line-height: 1.5;
-  margin: 4px 0 0 0;
-}
-
 .roadmap__percent {
-  margin: 0;
-  color: var(--paragraph);
-  font-size: var(--medium);
+  font-size: var(--font-size-2);
+  color: var(--primary-headline);
 }
 
 .roadmap__title {
-  margin: 0;
-  font-weight: bold;
-  color: var(--headline);
+  font-weight: 600;
+  font-size: var(--font-size-2);
+  color: var(--primary-headline);
 }
 
-@media only screen and (min-width: 768px) {
-  .roadmap__p {
-    font-size: var(--medium);
-    line-height: 1.6;
-  }
-
-  .roadmap__percent {
-    font-size: var(--large);
-  }
+.roadmap__text {
+  font-size: var(--font-size-1);
+  color: var(--primary-paragraph);
 }

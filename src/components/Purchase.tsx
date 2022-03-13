@@ -10,8 +10,8 @@ interface PurchaseProps {
 const Purchase = (props: PurchaseProps): JSX.Element => {
   return (
     <Card id="purchase">
-      <Title>Find Your Travel Companion</Title>
       <Col xs={12} lg={7}>
+        <Title>Find Your Travel Companion</Title>
         <Paragraph>
           Begin your traveling journey with a fox today! Each traveling fox is
           guaranteed to be unique and duplicates will never exist. The initial

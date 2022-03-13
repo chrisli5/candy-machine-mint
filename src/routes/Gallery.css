@@ -1,8 +1,50 @@
 .imageLayer {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 500px;
-  margin-left: -250px;
-  margin-top: -357px;
+  top: -40px;
+  left: 0;
+}
+
+.gallery__header {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.reset__container {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.images__container {
+  position: relative;
+  max-width: 400px;
+  margin: auto;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+@media only screen and (min-width: 375px) {
+  .images__container {
+    height: 500px;
+  }
+}
+
+@media only screen and (min-width: 425px) {
+  .images__container {
+    height: 600px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .images__container {
+    height: 375px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .images__container {
+    height: 550px;
+  }
 }

@@ -35,7 +35,7 @@ const Link = (props: LinkProps): JSX.Element => (
     rel="noopener noreferrer"
     href={props.href}
     target="_blank"
-    className="link px-2 px-lg-3"
+    className="navlink px-2 px-lg-3"
   >
     {props.children}
   </a>

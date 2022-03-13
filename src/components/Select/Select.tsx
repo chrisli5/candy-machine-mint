@@ -6,7 +6,7 @@ import "./Select.css";
 interface SelectProps {
   ariaLabel: string;
   optionList: Option[];
-  initialOption: Option;
+  selected: Option;
   eventKey: string;
   onChange: (option: Option) => void;
 }
@@ -19,27 +19,35 @@ type Option = {
 const CustomToggle = ({ children, eventKey }) => {
   const decoratedOnClick = useAccordionButton(eventKey);
 
-  return <div onClick={decoratedOnClick}>{children}</div>;
+  return (
+    <Accordion.Item eventKey={eventKey} onClick={decoratedOnClick}>
+      {children}
+    </Accordion.Item>
+  );
 };
 
 const AccordionSelect = (props: SelectProps): JSX.Element => (
   <CustomToggle eventKey={props.eventKey}>
-    <div className="gallery__select" aria-label={props.ariaLabel}>
-      <h4 className="select__header">{props.initialOption.name}</h4>
-      <Accordion.Collapse eventKey={props.eventKey}>
-        <ul className="select__ul">
-          {props.optionList.map((option) => (
-            <li
-              key={option.name}
-              className="select__li"
-              onClick={() => props.onChange(option)}
-            >
-              {option.name}
-            </li>
-          ))}
-        </ul>
-      </Accordion.Collapse>
-    </div>
+    <Accordion.Header>
+      <h3 className="accordion__header">{props.selected.name}</h3>
+    </Accordion.Header>
+    <Accordion.Body className="accordion__body">
+      <ul className="accordion__ul">
+        {props.optionList.map((option) => (
+          <li
+            key={option.name}
+            className={
+              props.selected.name === option.name
+                ? "accordion__li accordion__li--active"
+                : "accordion__li"
+            }
+            onClick={() => props.onChange(option)}
+          >
+            {option.name}
+          </li>
+        ))}
+      </ul>
+    </Accordion.Body>
   </CustomToggle>
 );
 
