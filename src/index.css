@@ -11,20 +11,14 @@
   --secondary-highlight: #eebbc3;
   --secondary-link: #5f6c7b;
 
-  --font-size-0: 0.75rem;
-  --font-size-1: 1rem;
+  --font-size--2: 0.625rem;
+  --font-size--1: 0.75rem;
+  --font-size-0: 1rem;
+  --font-size-1: calc(1.333 * var(--font-size-0));
   --font-size-2: calc(1.333 * var(--font-size-1));
   --font-size-3: calc(1.333 * var(--font-size-2));
   --font-size-4: calc(1.333 * var(--font-size-3));
-
-  --space-size-0: 0.75rem;
-  --space-size-1: 1rem;
-  --space-size-2: calc(1.333 * var(--space-size-1));
-  --space-size-3: calc(1.333 * var(--space-size-2));
-  --space-size-4: calc(1.333 * var(--space-size-3));
-  --space-size-5: calc(1.333 * var(--space-size-4));
-  --space-size-6: calc(1.333 * var(--space-size-5));
-  --space-size-7: calc(1.333 * var(--space-size-7));
+  --font-size-5: calc(1.333 * var(--font-size-4));
 }
 
 body {
@@ -35,6 +29,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.5;
+  font-size: var(--font-size-0);
   background-color: var(--primary-bg);
 }
 

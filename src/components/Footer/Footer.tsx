@@ -1,6 +1,6 @@
 import Col from "react-bootstrap/Col";
-import Card from "./Card";
-import "./Footer/Footer.css";
+import Card from "../Card/Card";
+import "./Footer.css";
 
 interface FooterLinkProps {
   children: string;
@@ -23,7 +23,7 @@ const Footer = (): JSX.Element => (
     <Col xs={12} lg={7}>
       <h4 className="footer__header">Kyubits NFT</h4>
       <p className="footer__copyright">
-        ©2021 Kyubits NFT. All Rights Reserved.
+        © 2022 Kyubits NFT. All Rights Reserved.
       </p>
     </Col>
     <Col xs={12} lg={4} className="offset-lg-1">

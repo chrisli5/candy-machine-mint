@@ -1,15 +1,19 @@
 .roadmap__percent {
-  font-size: var(--font-size-2);
   color: var(--primary-headline);
 }
 
 .roadmap__title {
   font-weight: 600;
-  font-size: var(--font-size-2);
   color: var(--primary-headline);
 }
 
 .roadmap__text {
-  font-size: var(--font-size-1);
+  font-size: var(--font-size--1);
   color: var(--primary-paragraph);
+}
+
+@media only screen and (min-width: 768px) {
+  .roadmap__text {
+    font-size: var(--font-size-0);
+  }
 }

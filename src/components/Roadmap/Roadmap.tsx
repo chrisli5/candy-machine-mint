@@ -1,7 +1,7 @@
 import Timeline from "@mui/lab/Timeline";
 import Col from "react-bootstrap/Col";
 import Title from "../Text/Title";
-import Card from "../Card";
+import Card from "../Card/Card";
 import RoadmapItem from "./RoadmapItem";
 import Paragraph from "../Text/Paragraph";
 

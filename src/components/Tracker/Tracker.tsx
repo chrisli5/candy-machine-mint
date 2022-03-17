@@ -1,6 +1,4 @@
 import "./Tracker.css";
-import Image from "react-bootstrap/Image";
-import imageFox from "../../images/orangefox1.png";
 
 interface TrackerProps {
   itemsRedeemed: number;

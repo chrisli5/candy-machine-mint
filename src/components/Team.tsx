@@ -2,10 +2,10 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 import Title from "./Text/Title";
-import Card from "./Card";
+import Card from "./Card/Card";
 import Paragraph from "./Text/Paragraph";
-import fox3 from "../images/pencil.png";
-import fox5 from "../images/laptop.png";
+import pencilImage from "../images/about/pencil.png";
+import laptopImage from "../images/about/laptop.png";
 
 const Team = (): JSX.Element => (
   <Card id="team" secondary>
@@ -25,15 +25,15 @@ const Team = (): JSX.Element => (
       <Row>
         <Col className="pe-1">
           <Image
-            src={fox5}
-            style={{ borderRadius: "8px", backgroundColor: "pink" }}
+            src={pencilImage}
+            style={{ borderRadius: "0.5rem", backgroundColor: "pink" }}
             fluid
           />
         </Col>
         <Col className="ps-1">
           <Image
-            src={fox3}
-            style={{ borderRadius: "8px", backgroundColor: "pink" }}
+            src={laptopImage}
+            style={{ borderRadius: "0.5rem", backgroundColor: "pink" }}
             fluid
           />
         </Col>

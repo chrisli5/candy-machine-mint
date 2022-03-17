@@ -17,6 +17,7 @@ import { Image } from "react-bootstrap";
 import toast, { Toaster } from "react-hot-toast";
 import App from "./app/app";
 import Notification from "./components/Notification/Notification";
+import boxImage from "./images/icons/rocket.png";
 
 const network = process.env.REACT_APP_SOLANA_NETWORK as WalletAdapterNetwork;
 
@@ -52,7 +53,7 @@ const Wallet: FC = () => {
   return (
     <ConnectionProvider endpoint={endpoint}>
       <WalletProvider wallets={wallets} onError={onError} autoConnect>
-        <WalletModalProvider logo={<Image src="./images/icon1.png" />}>
+        <WalletModalProvider logo={<Image src={boxImage} fluid />}>
           <App />
         </WalletModalProvider>
         <Toaster position="bottom-left" reverseOrder={false} />

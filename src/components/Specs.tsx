@@ -1,9 +1,12 @@
 import Col from "react-bootstrap/Col";
-import Image from "react-bootstrap/Image";
-import Card from "./Card";
+import Card from "./Card/Card";
 import Title from "./Text/Title";
 import Paragraph from "./Text/Paragraph";
-import fox4 from "../images/beach.png";
+import ImageGrid from "./ImageGrid/ImageGrid";
+import beachImage from "../images/examples/beach.png";
+import spaceImage from "../images/examples/space.png";
+import ninjaImage from "../images/examples/ninja.png";
+import { Row } from "react-bootstrap";
 
 const Specs = (): JSX.Element => (
   <Card id="specifications" secondary>
@@ -24,8 +27,13 @@ const Specs = (): JSX.Element => (
         contract.
       </Paragraph>
     </Col>
-    <Col xs={12} lg={4} className="my-lg-auto offset-lg-1">
-      <Image src={fox4} fluid style={{ borderRadius: "8px" }} />
+    <Col xs={12} lg={4} className="offset-lg-1 my-auto">
+      <Row className="px-2 p-lg-0">
+        <ImageGrid src={spaceImage} xs={6} md={3} lg={6} className="p-1" />
+        <ImageGrid src={beachImage} xs={6} md={3} lg={6} className="p-1" />
+        <ImageGrid src={ninjaImage} xs={6} md={3} lg={6} className="p-1" />
+        <ImageGrid src={spaceImage} xs={6} md={3} lg={6} className="p-1" />
+      </Row>
     </Col>
   </Card>
 );

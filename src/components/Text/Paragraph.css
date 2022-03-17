@@ -1,6 +1,6 @@
 .paragraph {
   text-align: justify;
-  font-size: var(--font-size-1);
+  font-size: var(--font-size--1);
 }
 
 .paragraph__primary {
@@ -13,6 +13,12 @@
 
 @media only screen and (min-width: 768px) {
   .paragraph {
-    font-size: var(--font-size-2);
+    font-size: var(--font-size-0);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .paragraph {
+    font-size: var(--font-size-1);
   }
 }

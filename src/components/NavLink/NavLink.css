@@ -1,13 +1,14 @@
 .navlink {
-  font-size: var(--small);
-  font-weight: 600;
+  font-weight: 500;
   transition: 0.15s;
   text-decoration: none;
   text-transform: capitalize;
   color: var(--primary-paragraph);
 }
 
+.nav-icon--active,
 .navlink--active,
+.nav-icon:hover,
 .navlink:hover {
   color: var(--primary-headline);
 }
@@ -18,16 +19,12 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  border-radius: 12px;
-  padding: 4px 12px;
-  width: 64px;
+  padding: 0.25rem;
+  color: var(--primary-paragraph);
 }
 
 .nav-icon p {
-  font-size: 11px;
+  font-size: var(--font-size--1);
   line-height: 1.5;
-  margin: 0;
-}
-
-.nav-icon--active {
+  margin: 0.25rem 0 0 0;
 }

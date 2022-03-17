@@ -1,24 +1,21 @@
 .wallet-adapter-button {
+  font-size: var(--font-size-0);
   background-color: #404144;
-  border: none;
-  border-radius: 6px;
   color: #fff;
+  border: 0;
+  border-radius: 0.25rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   font-family: "ProximaNova", "Roboto", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
-  font-size: 16px;
   font-weight: 600;
-  height: 50px;
-  line-height: 50px;
-  padding: 0 20px;
+  padding: 0.5rem 0.75rem;
 }
 
 .wallet-adapter-button-trigger {
   background-color: #ff6e6c;
   color: #fffffe;
-  height: 36px;
   transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
 }
 

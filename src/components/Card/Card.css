@@ -7,18 +7,16 @@
 }
 
 .home__card {
-  padding-top: var(--space-size-4);
-  padding-bottom: var(--space-size-4);
+  padding: 2rem 1rem 2rem 1rem;
 }
 
 .card__body {
-  max-width: 1200px;
+  max-width: 75rem;
   margin: auto;
 }
 
 @media only screen and (min-width: 768px) {
   .home__card {
-    padding-top: var(--space-size-6);
-    padding-bottom: var(--space-size-6);
+    padding: 3rem 2rem 3rem 2rem;
   }
 }

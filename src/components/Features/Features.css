@@ -1,4 +1,36 @@
-.feature__text {
-  font-size: var(--font-size-1);
+.feature-item__div {
+  height: 5rem;
+}
+
+.feature-item__image {
+  width: 4rem;
+}
+
+.feature-item__text {
+  font-size: var(--font-size--1);
   color: var(--secondary-paragraph);
+}
+
+@media only screen and (min-width: 768px) {
+  .feature-item__div {
+    height: 6rem;
+  }
+
+  .feature-item__image {
+    width: 4.5rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .feature-item__div {
+    height: 7rem;
+  }
+
+  .feature-item__image {
+    width: 6rem;
+  }
+
+  .feature-item__text {
+    font-size: var(--font-size-0);
+  }
 }

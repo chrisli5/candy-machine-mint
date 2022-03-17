@@ -1,5 +1,5 @@
 import Col from "react-bootstrap/Col";
-import Card from "./Card";
+import Card from "./Card/Card";
 import Paragraph from "./Text/Paragraph";
 import Title from "./Text/Title";
 
@@ -10,7 +10,7 @@ interface PurchaseProps {
 const Purchase = (props: PurchaseProps): JSX.Element => {
   return (
     <Card id="purchase">
-      <Col xs={12} lg={7}>
+      <Col xs={12} lg={7} className="mb-3">
         <Title>Find Your Travel Companion</Title>
         <Paragraph>
           Begin your traveling journey with a fox today! Each traveling fox is

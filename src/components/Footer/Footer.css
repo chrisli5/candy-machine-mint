@@ -1,14 +1,19 @@
 .footer__header {
   font-weight: 700;
-  font-size: var(--font-size-2);
+  font-size: var(--font-size-0);
   color: var(--primary-headline);
 }
 
 .footer__link {
   transition: color 200ms ease-in-out;
   text-decoration: none;
-  font-size: var(--font-size-1);
+  font-size: var(--font-size--1);
   color: var(--primary-link);
+}
+
+.footer__link p {
+  margin: 0;
+  margin-bottom: 0.5rem;
 }
 
 .footer__link:hover {
@@ -16,6 +21,10 @@
 }
 
 .footer__copyright {
-  font-size: var(--font-size-1);
+  font-size: var(--font-size--1);
   color: var(--primary-paragraph);
+}
+
+#footer {
+  margin-bottom: 2rem;
 }

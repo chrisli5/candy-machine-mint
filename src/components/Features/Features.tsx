@@ -1,20 +1,20 @@
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Title from "../Text/Title";
-import Card from "../Card";
+import Card from "../Card/Card";
 import FeatureItem from "./FeatureItem";
 import Paragraph from "../Text/Paragraph";
-import imageFox1 from "../../images/icons/camera.png";
-import imageFox2 from "../../images/icons/tophat.png";
-import imageFox3 from "../../images/icons/luggage.png";
-import imageFox4 from "../../images/icons/snail.png";
-import imageFox5 from "../../images/icons/rocket.png";
+import cameraImage from "../../images/icons/camera.png";
+import hatImage from "../../images/icons/tophat.png";
+import luggageImage from "../../images/icons/luggage.png";
+import snailImage from "../../images/icons/snail.png";
+import rocketImage from "../../images/icons/rocket.png";
 
 const Features = (): JSX.Element => {
   return (
     <Card id="features" secondary>
       <Title secondary>Rewards & Features</Title>
-      <Col xs={12}>
+      <Col xs={12} className="mb-md-2 mb-lg-4">
         <Paragraph secondary>
           Adopting a Kyubi not only grants you access and ownership rights to an
           amazingly cute fox, but also additional rewards through roadmap
@@ -22,26 +22,26 @@ const Features = (): JSX.Element => {
         </Paragraph>
       </Col>
       <Col xs={12}>
-        <Row className="my-auto">
+        <Row className="justify-content-md-evenly">
           <FeatureItem
-            src={imageFox1}
+            src={cameraImage}
             text="5,000 provably rare Kyubit NFTs."
           />
           <FeatureItem
-            src={imageFox2}
-            text="Gain additional rewards through roadmap activations."
+            src={luggageImage}
+            text="Earn passive rewards as you hold."
           />
           <FeatureItem
-            src={imageFox3}
+            src={snailImage}
+            text="Earn passive rewards as you hold."
+          />
+          <FeatureItem
+            src={rocketImage}
             text="Tiered assets with a wide range of rarities."
           />
           <FeatureItem
-            src={imageFox4}
-            text="Earn passive rewards as you hold."
-          />
-          <FeatureItem
-            src={imageFox5}
-            text="Earn passive rewards as you hold."
+            src={hatImage}
+            text="Gain additional rewards through roadmap activations."
           />
         </Row>
       </Col>

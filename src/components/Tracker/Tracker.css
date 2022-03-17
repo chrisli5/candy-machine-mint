@@ -4,19 +4,16 @@
   justify-content: center;
   align-items: center;
   margin: auto;
-  border-radius: 6px;
-  padding: 0 12px 12px 12px;
   width: 100%;
-  max-width: 510px;
 }
 
 .tracker__title {
   font-weight: 700;
-  font-size: var(--font-size-3);
+  font-size: var(--font-size-1);
   color: var(--primary-headline);
-  padding: 0 8px;
   text-align: center;
   text-transform: capitalize;
+  margin-bottom: 1rem;
 }
 
 .tracker__row {
@@ -24,6 +21,7 @@
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  margin-bottom: 1.5rem;
 }
 
 .tracker__item {
@@ -31,29 +29,33 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 72px;
-  padding: 4px 0;
-  border-radius: 12px;
   color: var(--primary-paragraph);
 }
 
 .tracker__value {
-  font-size: 24px;
+  font-size: var(--font-size-1);
   text-align: center;
 }
 
 .tracker__label {
-  line-height: 1.5;
-  font-size: var(--xsmall);
+  font-size: var(--font-size--1);
   text-align: center;
 }
 
 .tracker__button {
-  padding-top: 12px;
   width: 100%;
 }
 
+@media only screen and (min-width: 375px) {
+  .tracker {
+    padding: 0 1rem 0 1rem;
+  }
+}
+
 @media only screen and (min-width: 425px) {
+  .tracker {
+    padding: 0 2.5rem 0 2.5rem;
+  }
 }
 
 @media only screen and (min-width: 768px) {

@@ -9,26 +9,23 @@ import {
 import toast from "react-hot-toast";
 import { useAnchorWallet } from "@solana/wallet-adapter-react";
 import { LAMPORTS_PER_SOL } from "@solana/web3.js";
-import Image from "react-bootstrap/Image";
 import Col from "react-bootstrap/Col";
 
 import Notification from "../components/Notification/Notification";
 import Purchase from "../components/Purchase";
-import Hero from "../components/Hero";
+import Hero from "../components/Hero/Hero";
 import Intro from "../components/Intro/Intro";
 import Specs from "../components/Specs";
-import Line from "../components/Line";
 import Team from "../components/Team";
 import Features from "../components/Features/Features";
 import Roadmap from "../components/Roadmap/Roadmap";
-import Footer from "../components/Footer";
+import Footer from "../components/Footer/Footer";
 import Countdown from "react-countdown";
 import Counter from "../components/Counter/Counter";
 import Tracker from "../components/Tracker/Tracker";
 import { WalletButton } from "../components/Buttons/Buttons";
 import MintButton from "../components/Buttons/MintButton";
-import imageFox from "../images/base/OrangeFox.png";
-import box2 from "../images/box2.png";
+import TrackerImage from "../components/Tracker/TrackerImage";
 
 export interface HomeProps {
   candyMachineId: anchor.web3.PublicKey;
@@ -175,21 +172,9 @@ const Home = (props: HomeProps): JSX.Element => {
       <Intro />
       <Specs />
       <Purchase>
-        <Col
-          xs={12}
-          lg={4}
-          style={{ borderRadius: "20px" }}
-          className="px-3 offset-lg-1 d-flex-column"
-        >
+        <Col xs={12} lg={4} className="px-3 offset-lg-1 d-flex-column">
           <h3 className="tracker__title">Fox Adoption Center</h3>
-          <div className="d-flex">
-            <Image
-              src={box2}
-              style={{ width: "200px" }}
-              className="m-auto"
-              fluid
-            />
-          </div>
+          <TrackerImage />
           {isActive ? (
             <Countdown
               date={startDate}

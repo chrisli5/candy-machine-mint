@@ -1,4 +1,3 @@
-import React from "react";
 import "./Paragraph.css";
 
 interface ParagraphProps {
@@ -8,7 +7,7 @@ interface ParagraphProps {
 
 const Paragraph = (props: ParagraphProps): JSX.Element => (
   <p
-    className={`paragraph mb-4 ${
+    className={`paragraph ${
       props.secondary ? "paragraph__secondary" : "paragraph__primary"
     }`}
   >

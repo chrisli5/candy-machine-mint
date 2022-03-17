@@ -3,30 +3,18 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Image from "react-bootstrap/Image";
-import logoFull from "../images/newestlogo.png";
-import logo from "../images/logo_3.png";
+import logoFull from "../images/header-md.png";
 import { HeaderButton } from "./Buttons/Buttons";
 
 export default (): JSX.Element => (
   <Navbar
     variant="light"
     fixed="top"
-    style={{
-      backgroundColor: "var(--primary-bg)",
-    }}
+    style={{ backgroundColor: "var(--primary-bg)" }}
   >
-    <Container className="px-md-3 py-md-1" style={{ maxWidth: "1200px" }}>
+    <Container className="ps-2 pe-3" style={{ maxWidth: "75rem" }}>
       <Navbar.Brand>
-        <Image
-          src={logo}
-          className="d-md-none"
-          style={{ width: "32px", height: "32px" }}
-        />
-        <Image
-          src={logoFull}
-          className="d-none d-md-inline"
-          style={{ width: "129px", height: "48px" }}
-        />
+        <Image src={logoFull} style={{ width: "8rem", height: "3rem" }} />
       </Navbar.Brand>
       <Nav className="d-none d-md-inline-flex me-auto">
         <NavLink to="/#intro">home</NavLink>

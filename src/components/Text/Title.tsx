@@ -7,7 +7,7 @@ interface TitleProps {
 
 const Title = (props: TitleProps): JSX.Element => (
   <h2
-    className={`title mb-4 ${
+    className={`title mb-3 ${
       props.secondary ? "title__secondary" : "title__primary"
     }`}
   >
