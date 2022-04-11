@@ -1,7 +1,14 @@
-.footer__header {
+.footer__logo {
+  width: 2.5rem;
+  padding-right: 0.5rem;
+}
+
+.footer__title,
+.footer__contact {
   font-weight: 700;
   font-size: var(--font-size-0);
   color: var(--primary-headline);
+  margin-bottom: 0.5rem;
 }
 
 .footer__link {
@@ -25,6 +32,26 @@
   color: var(--primary-paragraph);
 }
 
-#footer {
-  margin-bottom: 2rem;
+@media only screen and (min-width: 768px) {
+  .footer__title {
+    margin-left: 2rem;
+  }
+
+  .footer__copyright {
+    margin-left: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .footer__title {
+    font-size: var(--font-size-1);
+  }
+
+  .footer__contact {
+    font-size: var(--font-size-1);
+  }
+
+  .footer__link {
+    font-size: var(--font-size-0);
+  }
 }

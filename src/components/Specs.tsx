@@ -10,7 +10,9 @@ import { Row } from "react-bootstrap";
 
 const Specs = (): JSX.Element => (
   <Card id="specifications" secondary>
-    <Title secondary>Token Specifications</Title>
+    <Title secondary className="mb-3">
+      Token Specifications
+    </Title>
     <Col xs={12} lg={7}>
       <Paragraph secondary>
         Kyubits is a collection of programmatically, randomly generated NFTs

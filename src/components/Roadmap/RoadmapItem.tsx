@@ -9,7 +9,7 @@ import "./Roadmap.css";
 interface RoadmapItemProps {
   title?: string;
   percent: string;
-  children: string;
+  children?: string;
   success: boolean;
 }
 

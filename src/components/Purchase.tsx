@@ -11,7 +11,7 @@ const Purchase = (props: PurchaseProps): JSX.Element => {
   return (
     <Card id="purchase">
       <Col xs={12} lg={7} className="mb-3">
-        <Title>Find Your Travel Companion</Title>
+        <Title className="mb-3">Find Your Travel Companion</Title>
         <Paragraph>
           Begin your traveling journey with a fox today! Each traveling fox is
           guaranteed to be unique and duplicates will never exist. The initial

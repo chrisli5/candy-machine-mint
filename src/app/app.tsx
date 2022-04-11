@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Home from "../routes/Home";
 import Gallery from "../routes/Gallery";
 import Provenance from "../routes/Provenance";
-import Header from "../components/Header";
+import Header from "../components/Header/Header";
 import NavBottom from "../components/NavBottom";
 import "./app.css";
 import React from "react";

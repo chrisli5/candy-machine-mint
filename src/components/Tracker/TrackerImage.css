@@ -1,4 +1,6 @@
 .tracker__image {
+    margin: auto;
+    max-width: 22rem;
 }
 
 @media only screen and (min-width: 375px) {
@@ -8,6 +10,7 @@
 }
 
 @media only screen and (min-width: 768px) {
+
 }
 
 @media only screen and (min-width: 992px) {

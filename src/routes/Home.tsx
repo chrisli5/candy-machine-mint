@@ -173,7 +173,6 @@ const Home = (props: HomeProps): JSX.Element => {
       <Specs />
       <Purchase>
         <Col xs={12} lg={4} className="px-3 offset-lg-1 d-flex-column">
-          <h3 className="tracker__title">Fox Adoption Center</h3>
           <TrackerImage />
           {isActive ? (
             <Countdown

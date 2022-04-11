@@ -13,7 +13,7 @@ const Roadmap = (props: RoadmapProps): JSX.Element => {
   return (
     <Card id="roadmap">
       <Col xs={12}>
-        <Title>Roadmap Goals</Title>
+        <Title className="mb-3">Roadmap Goals</Title>
         <Paragraph>
           Heres a roadmap of our planned features as we hit certain checkpoints.
           These goals are tentative and we're open to feedback from the
@@ -26,9 +26,7 @@ const Roadmap = (props: RoadmapProps): JSX.Element => {
           percent="0"
           title="The Journey Begins"
           success={props.percentSold > 0}
-        >
-          The team hopes we get past this.
-        </RoadmapItem>
+        ></RoadmapItem>
         <RoadmapItem
           percent="20"
           title="Kyubits Raffle"
@@ -39,11 +37,11 @@ const Roadmap = (props: RoadmapProps): JSX.Element => {
         </RoadmapItem>
         <RoadmapItem
           percent="40"
-          title="Royalties Reward I"
+          title="Kyubits Raffle II"
           success={props.percentSold >= 40}
         >
-          10% of royalties made from secondary marketplace sales will be given
-          to current holders.
+          10 Kyubit NFTs from the collection will be raffled off in our
+          community discord.
         </RoadmapItem>
         <RoadmapItem
           percent="60"
@@ -61,16 +59,6 @@ const Roadmap = (props: RoadmapProps): JSX.Element => {
         >
           Foxes will be allowed to breed to generate a new generation of Kyubit
           NFTs, more details to come if this goal is reached.
-        </RoadmapItem>
-        <RoadmapItem
-          percent="100"
-          title="Royalties Reward II & Marketplace Listing"
-          success={props.percentSold >= 100}
-        >
-          After all Kyubis have been minted, our team will request for the
-          collection to be listed on secondary marketplaces. In addition, 100%
-          of royalties made from secondary marketplace sales will be given to
-          current holders.
         </RoadmapItem>
       </Timeline>
     </Card>

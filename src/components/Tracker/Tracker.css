@@ -5,6 +5,7 @@
   align-items: center;
   margin: auto;
   width: 100%;
+  max-width: 22rem;
 }
 
 .tracker__title {
@@ -47,18 +48,18 @@
 }
 
 @media only screen and (min-width: 375px) {
-  .tracker {
-    padding: 0 1rem 0 1rem;
-  }
+
 }
 
 @media only screen and (min-width: 425px) {
-  .tracker {
-    padding: 0 2.5rem 0 2.5rem;
-  }
+
 }
 
 @media only screen and (min-width: 768px) {
+  .tracker__label {
+    font-size: var(--font-size-0);
+  }
+  
 }
 
 @media only screen and (min-width: 992px) {

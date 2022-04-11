@@ -13,7 +13,9 @@ import rocketImage from "../../images/icons/rocket.png";
 const Features = (): JSX.Element => {
   return (
     <Card id="features" secondary>
-      <Title secondary>Rewards & Features</Title>
+      <Title secondary className="mb-3">
+        Rewards & Features
+      </Title>
       <Col xs={12} className="mb-md-2 mb-lg-4">
         <Paragraph secondary>
           Adopting a Kyubi not only grants you access and ownership rights to an

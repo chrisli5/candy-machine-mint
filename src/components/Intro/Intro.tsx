@@ -11,8 +11,8 @@ import ninjaImage from "../../images/examples/ninja.png";
 
 const Intro = (): JSX.Element => (
   <Card id="intro">
-    <Col xs={12} lg={7} className="mb-1 mb-md-2 mb-lg-0">
-      <Title>Welcome to the Club of Traveling Foxes</Title>
+    <Col xs={12} lg={7} className="mb-1 mb-lg-0">
+      <Title className="mb-3">Welcome to the Club of Traveling Foxes</Title>
       <Paragraph>
         Kyubits is a collection of 5,000 traveling fox NFTs-unique digital art
         assets that are stored on the Solana blockchain. Each NFT in the Kyubits
@@ -22,13 +22,10 @@ const Intro = (): JSX.Element => (
       </Paragraph>
     </Col>
     <Col xs={12} lg={4} className="offset-lg-1 my-auto">
-      <Row className="px-2 p-lg-0">
-        <ImageGrid src={spaceImage} xs={4} md={2} lg={4} className="p-1" />
-        <ImageGrid src={beachImage} xs={4} md={2} lg={4} className="p-1" />
-        <ImageGrid src={ninjaImage} xs={4} md={2} lg={4} className="p-1" />
-        <ImageGrid src={spaceImage} xs={4} md={2} lg={4} className="p-1" />
-        <ImageGrid src={beachImage} xs={4} md={2} lg={4} className="p-1" />
-        <ImageGrid src={ninjaImage} xs={4} md={2} lg={4} className="p-1" />
+      <Row className="px-2 p-md-0">
+        <ImageGrid src={spaceImage} xs={4} className="p-1" />
+        <ImageGrid src={beachImage} xs={4} className="p-1" />
+        <ImageGrid src={spaceImage} xs={4} className="p-1" />
       </Row>
     </Col>
   </Card>
