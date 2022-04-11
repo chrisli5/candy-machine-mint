@@ -9,25 +9,7 @@ import {
 import toast from "react-hot-toast";
 import { useAnchorWallet } from "@solana/wallet-adapter-react";
 import { LAMPORTS_PER_SOL } from "@solana/web3.js";
-import Image from "react-bootstrap/Image";
-import Col from "react-bootstrap/Col";
-
 import Notification from "../components/Notification/Notification";
-import Purchase from "../components/Purchase";
-import Hero from "../components/Hero";
-import Intro from "../components/Intro/Intro";
-import Specs from "../components/Specs";
-import Line from "../components/Line";
-import Team from "../components/Team";
-import Features from "../components/Features/Features";
-import Roadmap from "../components/Roadmap/Roadmap";
-import Footer from "../components/Footer";
-import Countdown from "react-countdown";
-import Counter from "../components/Counter/Counter";
-import Tracker from "../components/Tracker/Tracker";
-import { WalletButton } from "../components/Buttons/Buttons";
-import MintButton from "../components/Buttons/MintButton";
-import imageFox from "../images/orangefox1.png";
 
 export interface HomeProps {
   candyMachineId: anchor.web3.PublicKey;
@@ -168,59 +150,7 @@ const Home = (props: HomeProps): JSX.Element => {
       : (itemsRedeemed / itemsAvailable) * 100
     : 0;
 
-  return (
-    <main>
-      <Hero />
-      <Intro />
-      <Line />
-      <Purchase>
-        <Col xs={12} lg={4} className="offset-lg-1 d-flex-column">
-          <div className="d-flex mb-3">
-            <Image
-              src={imageFox}
-              className="m-auto"
-              style={{ width: "200px" }}
-            />
-          </div>
-          {isActive ? (
-            <Countdown
-              date={startDate}
-              onMount={({ completed }) => completed && setIsActive(true)}
-              onComplete={() => setIsActive(true)}
-              renderer={Counter}
-            />
-          ) : (
-            <Tracker
-              itemsAvailable={itemsAvailable}
-              itemsRedeemed={itemsRedeemed}
-              itemsRemaining={itemsRemaining}
-            >
-              {wallet ? (
-                <MintButton
-                  isActive={isActive}
-                  isSoldOut={isSoldOut}
-                  isMinting={isMinting}
-                  onMint={onMint}
-                />
-              ) : (
-                <WalletButton />
-              )}
-            </Tracker>
-          )}
-        </Col>
-      </Purchase>
-      <Line />
-      <Features />
-      <Line />
-      <Specs />
-      <Line />
-      <Roadmap percentSold={percentSold} />
-      <Line />
-      <Team />
-      <Line />
-      <Footer />
-    </main>
-  );
+  return <main></main>;
 };
 
 export default Home;
