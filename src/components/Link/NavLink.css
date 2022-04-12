@@ -1,0 +1,13 @@
+.navlink {
+    font-weight: 500;
+    transition: 0.15s;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--primary-body);
+    margin-right: 2rem;
+}
+
+.navlink--active,
+.navlink:hover {
+    color: var(--primary-headline);
+}

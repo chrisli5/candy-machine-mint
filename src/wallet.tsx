@@ -13,10 +13,13 @@ import {
 } from "@solana/wallet-adapter-wallets";
 import { clusterApiUrl } from "@solana/web3.js";
 import React, { FC, useCallback, useMemo } from "react";
-import { Image } from "react-bootstrap";
+import Image from "react-bootstrap/Image";
 import toast, { Toaster } from "react-hot-toast";
 import App from "./app/app";
 import Notification from "./components/Notification/Notification";
+import imageFox from "./images/head3.png";
+
+require("@solana/wallet-adapter-react-ui/styles.css");
 
 const network = process.env.REACT_APP_SOLANA_NETWORK as WalletAdapterNetwork;
 
@@ -52,7 +55,9 @@ const Wallet: FC = () => {
   return (
     <ConnectionProvider endpoint={endpoint}>
       <WalletProvider wallets={wallets} onError={onError} autoConnect>
-        <WalletModalProvider logo={<Image src="./images/icon1.png" />}>
+        <WalletModalProvider
+          logo={<Image style={{ width: "4rem" }} src={imageFox} />}
+        >
           <App />
         </WalletModalProvider>
         <Toaster position="bottom-left" reverseOrder={false} />

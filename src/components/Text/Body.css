@@ -1,3 +1,4 @@
 .body {
-    color: var(--primary-body)
+    color: var(--primary-body);
+    text-align: justify;
 }

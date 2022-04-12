@@ -11,6 +11,12 @@ import { useAnchorWallet } from "@solana/wallet-adapter-react";
 import { LAMPORTS_PER_SOL } from "@solana/web3.js";
 import Notification from "../../components/Notification/Notification";
 import Introduction from "./Introduction/Introduction";
+import Features from "./Features/Features";
+import About from "./About/About";
+import Specifications from "./Specifications/Specifications";
+import Purchase from "./Purchase/Purchase";
+import Footer from "./Footer/Footer";
+import Hero from "./Hero/Hero";
 
 export interface HomeProps {
   candyMachineId: anchor.web3.PublicKey;
@@ -153,7 +159,13 @@ const Home = (props: HomeProps): JSX.Element => {
 
   return (
     <main>
+      <Hero />
       <Introduction />
+      <Specifications />
+      <Features />
+      <Purchase />
+      <About />
+      <Footer />
     </main>
   );
 };

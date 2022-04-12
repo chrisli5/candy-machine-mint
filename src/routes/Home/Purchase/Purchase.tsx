@@ -5,17 +5,17 @@ import Section from "../../../components/Section/Section";
 import Title from "../../../components/Text/Title";
 import Body from "../../../components/Text/Body";
 import imageA from "../../../images/examples/0.png";
-import { introduction } from "../content.json";
-import "./Introduction.css";
+import { purchase } from "../content.json";
+import "./Purchase.css";
 
-const Introduction = (): JSX.Element => (
-  <Section id="introduction">
+const Purchase = (): JSX.Element => (
+  <Section id="purchase">
     <Row>
       <Col xs={12}>
-        <Title>{introduction.title}</Title>
+        <Title>{purchase.title}</Title>
       </Col>
       <Col xs={12} lg={7}>
-        <Body>{introduction.body[0]}</Body>
+        <Body>{purchase.body[0]}</Body>
       </Col>
       <Col xs={12} lg={{ span: 4, offset: 1 }}>
         <Row>
@@ -34,4 +34,4 @@ const Introduction = (): JSX.Element => (
   </Section>
 );
 
-export default Introduction;
+export default Purchase;

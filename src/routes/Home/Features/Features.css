@@ -1,0 +1,22 @@
+.features__col {
+    text-align: center;
+}
+
+.features__wrapper {
+    height: 5rem;
+}
+
+.features__image {
+    width: 4rem;
+}
+
+.features__caption {
+    font-size: 0.75rem;
+    color: var(--primary-body);
+}
+
+@media only screen and (min-width: 768px) {
+    .features__row {
+        justify-content: space-evenly;
+    }
+  }

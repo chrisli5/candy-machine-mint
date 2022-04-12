@@ -1,10 +1,10 @@
 import { Route, Switch } from "react-router-dom";
 import * as anchor from "@project-serum/anchor";
 import Container from "react-bootstrap/Container";
+import Header from "../components/Header/Header";
 import Home from "../routes/Home/Home";
 import Gallery from "../routes/Gallery";
 import "./app.css";
-import React from "react";
 
 const treasury = new anchor.web3.PublicKey(
   process.env.REACT_APP_TREASURY_ADDRESS!
@@ -28,6 +28,7 @@ const txTimeout = 30000; // milliseconds (confirm this works for your project)
 const App = (): JSX.Element => {
   return (
     <Container className="app__container">
+      <Header />
       <Switch>
         <Route exact path="/">
           <Home
