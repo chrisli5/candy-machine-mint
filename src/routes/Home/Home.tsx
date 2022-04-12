@@ -5,11 +5,12 @@ import {
   CandyMachine,
   getCandyMachineState,
   mintOneToken,
-} from "../candy-machine";
+} from "../../candy-machine";
 import toast from "react-hot-toast";
 import { useAnchorWallet } from "@solana/wallet-adapter-react";
 import { LAMPORTS_PER_SOL } from "@solana/web3.js";
-import Notification from "../components/Notification/Notification";
+import Notification from "../../components/Notification/Notification";
+import Introduction from "./Introduction/Introduction";
 
 export interface HomeProps {
   candyMachineId: anchor.web3.PublicKey;
@@ -150,7 +151,11 @@ const Home = (props: HomeProps): JSX.Element => {
       : (itemsRedeemed / itemsAvailable) * 100
     : 0;
 
-  return <main></main>;
+  return (
+    <main>
+      <Introduction />
+    </main>
+  );
 };
 
 export default Home;

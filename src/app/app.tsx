@@ -1,7 +1,7 @@
 import { Route, Switch } from "react-router-dom";
 import * as anchor from "@project-serum/anchor";
 import Container from "react-bootstrap/Container";
-import Home from "../routes/Home";
+import Home from "../routes/Home/Home";
 import Gallery from "../routes/Gallery";
 import "./app.css";
 import React from "react";
