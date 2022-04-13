@@ -4,11 +4,11 @@ import Image from "react-bootstrap/Image";
 import Section from "../../../components/Section/Section";
 import Title from "../../../components/Text/Title";
 import Body from "../../../components/Text/Body";
-import imageCamera from "../../../images/icons/camera.png";
-import imageLuggage from "../../../images/icons/suitcase.png";
-import imageRocket from "../../../images/icons/rocket.png";
-import imageSnail from "../../../images/icons/snail.png";
-import imageTopHat from "../../../images/icons/tophat.png";
+import imageCamera from "../../../images/features/camera.png";
+import imageLuggage from "../../../images/features/suitcase.png";
+import imageRocket from "../../../images/features/rocket.png";
+import imageSnail from "../../../images/features/snail.png";
+import imageTopHat from "../../../images/features/tophat.png";
 import { features } from "../content.json";
 import "./Features.css";
 

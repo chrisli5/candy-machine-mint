@@ -1,6 +1,9 @@
+.intro__row {
+    padding: 0.5rem;
+}
+
 .intro__col {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding: 0.25rem;
 }
 
 .intro__image {

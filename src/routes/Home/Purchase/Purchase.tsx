@@ -4,7 +4,7 @@ import Image from "react-bootstrap/Image";
 import Section from "../../../components/Section/Section";
 import Title from "../../../components/Text/Title";
 import Body from "../../../components/Text/Body";
-import imageA from "../../../images/icons/rocket.png";
+import imageA from "../../../images/features/rocket.png";
 import { purchase } from "../content.json";
 import "./Purchase.css";
 

@@ -17,6 +17,7 @@ import Specifications from "./Specifications/Specifications";
 import Purchase from "./Purchase/Purchase";
 import Footer from "./Footer/Footer";
 import Hero from "./Hero/Hero";
+import Roadmap from "./Roadmap/Roadmap";
 
 export interface HomeProps {
   candyMachineId: anchor.web3.PublicKey;
@@ -164,6 +165,7 @@ const Home = (props: HomeProps): JSX.Element => {
       <Specifications />
       <Features />
       <Purchase />
+      <Roadmap />
       <About />
       <Footer />
     </main>
