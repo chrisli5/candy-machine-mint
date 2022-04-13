@@ -1,0 +1,19 @@
+.navibar {
+    background-color: var(--primary-bg);
+}
+
+.navibar__nav {
+    width: 100%;
+   justify-content: space-between;
+   padding: 0.25rem 0.75rem;
+}
+
+.navibar__item {
+    color: var(--primary-body);
+}
+
+@media only screen and (min-width: 768px) {
+    .navibar {
+        display: none;
+    }
+  }

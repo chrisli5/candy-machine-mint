@@ -1,0 +1,23 @@
+.navlinkicon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: var(--primary-body);
+  width: 3.5rem;
+}
+
+.navlinkicon__icon {
+  font-size: 1rem;
+}
+
+.navlinkicon__text {
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+.navlinkicon--active,
+.navlinkicon:hover {
+    color: var(--primary-headline);
+}

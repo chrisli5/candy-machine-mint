@@ -2,6 +2,7 @@ import { Route, Switch } from "react-router-dom";
 import * as anchor from "@project-serum/anchor";
 import Container from "react-bootstrap/Container";
 import Header from "../components/Header/Header";
+import Navbar from "../components/Navbar/Navbar";
 import Home from "../routes/Home/Home";
 import Gallery from "../routes/Gallery";
 import "./app.css";
@@ -29,6 +30,7 @@ const App = (): JSX.Element => {
   return (
     <Container className="app__container">
       <Header />
+      <Navbar />
       <Switch>
         <Route exact path="/">
           <Home

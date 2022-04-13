@@ -1,4 +1,5 @@
 .navlink {
+    margin-right: 1rem;
     font-weight: 500;
     transition: 0.15s;
     text-decoration: none;
@@ -10,3 +11,9 @@
 .navlink:hover {
     color: var(--primary-headline);
 }
+
+@media only screen and (min-width: 1024px) {
+    .navlink {
+        margin-right: 2rem;
+    }
+  }
