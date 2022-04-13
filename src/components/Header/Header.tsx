@@ -5,14 +5,14 @@ import NavLink from "../Link/NavLink";
 import Link from "../Link/Link";
 import MultiButton from "../Button/MultiButton";
 import Image from "react-bootstrap/Image";
-import imageLogo from "../../images/header-md.png";
+import imageBrand from "../../images/brand.png";
 import "./Header.css";
 
 const Header = (): JSX.Element => (
   <Navbar variant="light" fixed="top" className="header__navbar">
     <Container className="header__container" fluid>
       <Navbar.Brand>
-        <Image src={imageLogo} className="header__image" />
+        <Image src={imageBrand} className="header__image" />
       </Navbar.Brand>
       <Nav className="header__nav">
         <NavLink to="/#introduction">home</NavLink>

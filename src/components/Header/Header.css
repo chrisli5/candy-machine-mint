@@ -3,8 +3,7 @@
 }
 
 .header__nav {
-   margin-right: auto;
-   vertical-align: auto;
+    display: none;
 }
 
 .header__image {
@@ -16,3 +15,10 @@
     max-width: 75rem;
     padding: 0.25rem 1.75rem 0.25rem 1rem;
 }
+
+@media only screen and (min-width: 768px) {
+    .header__nav {
+        display: flex;
+        margin-right: auto;
+    }
+  }

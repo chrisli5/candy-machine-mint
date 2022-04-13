@@ -4,7 +4,6 @@
     text-decoration: none;
     text-transform: capitalize;
     color: var(--primary-body);
-    margin-right: 2rem;
 }
 
 .navlink--active,
