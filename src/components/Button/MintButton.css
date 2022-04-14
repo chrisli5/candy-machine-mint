@@ -1,0 +1,35 @@
+#mint-button {
+    cursor: pointer;
+    height: 3rem;
+    width: 100%;
+    background-color: var(--primary-button);
+    border: 0;
+    padding: 0;
+    font-weight: 600;
+}
+
+.mint-button__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    height: 100%;
+}
+
+.mint-button__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.08);
+    padding: 0 1.25rem;
+}
+
+.mint-button__image {
+    width: 2.5rem;
+}
+
+.mint-button__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}

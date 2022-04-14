@@ -22,6 +22,7 @@ import TokenStats from "../../components/TokenStats/TokenStats";
 import CountdownUI from "../../components/CountdownUI/CountdownUI";
 import Countdown from "react-countdown";
 import ModalButton from "../../components/Button/ModalButton";
+import MintButton from "../../components/Button/MintButton";
 
 export interface HomeProps {
   candyMachineId: anchor.web3.PublicKey;
@@ -171,11 +172,19 @@ const Home = (props: HomeProps): JSX.Element => {
       <Purchase>
         {wallet ? (
           isActive ? (
-            <TokenStats
-              itemsAvailable={itemsAvailable}
-              itemsRedeemed={itemsRedeemed}
-              itemsRemaining={itemsRemaining}
-            />
+            <div>
+              <TokenStats
+                itemsAvailable={itemsAvailable}
+                itemsRedeemed={itemsRedeemed}
+                itemsRemaining={itemsRemaining}
+              />
+              <MintButton
+                isActive={isActive}
+                isSoldOut={isSoldOut}
+                isMinting={isMinting}
+                onMint={onMint}
+              />
+            </div>
           ) : (
             <Countdown
               date={startDate}

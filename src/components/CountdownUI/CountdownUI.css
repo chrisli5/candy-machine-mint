@@ -29,11 +29,11 @@
 }
 
 .countdownUI__value {
-    color: #232946;
+    color: var(--secondary-headline);
 }
 
 .countdownUI__colon {
-    color: #232946;
+    color: var(--secondary-headline);
 }
 
 .countdownUI__label {

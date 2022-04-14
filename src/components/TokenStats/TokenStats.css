@@ -1,0 +1,32 @@
+.token-stats {
+    margin: 2rem 0 1rem 0;
+}
+
+.token-stats__ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.token-stats__value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: 550;
+    color: var(--secondary-headline);
+    width: 5rem;
+}
+
+.token-stats__label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75rem;
+    color: var(--secondary-body);
+    width: 5rem;
+}
