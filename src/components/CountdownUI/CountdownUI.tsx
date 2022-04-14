@@ -8,24 +8,42 @@ interface CountdownUIProps {
 }
 
 const CountdownUI = (props: CountdownUIProps): JSX.Element => (
-  <ul className="countdownUI">
-    <li className="countdownUI__li">
-      <span className="countdownUI__value">{props.days}</span>
-      <span className="countdownUI__label">days</span>
-    </li>
-    <li className="countdownUI__li">
-      <span className="countdownUI__value">{props.hours}</span>
-      <span className="countdownUI__label">hours</span>
-    </li>
-    <li className="countdownUI__li">
-      <span className="countdownUI__value">{props.minutes}</span>
-      <span className="countdownUI__label">minutes</span>
-    </li>
-    <li className="countdownUI__li">
-      <span className="countdownUI__value">{props.seconds}</span>
-      <span className="countdownUI__label">seconds</span>
-    </li>
-  </ul>
+  <div className="countdownUI">
+    <ul className="countdownUI__ul">
+      <li className="countdownUI__li">
+        <span className="countdownUI__value">{props.days}</span>
+      </li>
+      <li className="countdownUI__colon">:</li>
+      <li className="countdownUI__li">
+        <span className="countdownUI__value">{props.hours}</span>
+      </li>
+      <li className="countdownUI__colon">:</li>
+      <li className="countdownUI__li">
+        <span className="countdownUI__value">{props.minutes}</span>
+      </li>
+      <li className="countdownUI__colon">:</li>
+      <li className="countdownUI__li">
+        <span className="countdownUI__value">{props.seconds}</span>
+      </li>
+    </ul>
+    <ul className="countdownUI__ul">
+      <li className="countdownUI__li">
+        <span className="countdownUI__label">days</span>
+      </li>
+      <li className="countdownUI__spacer" />
+      <li className="countdownUI__li">
+        <span className="countdownUI__label">hours</span>
+      </li>
+      <li className="countdownUI__spacer" />
+      <li className="countdownUI__li">
+        <span className="countdownUI__label">minutes</span>
+      </li>
+      <li className="countdownUI__spacer" />
+      <li className="countdownUI__li">
+        <span className="countdownUI__label">seconds</span>
+      </li>
+    </ul>
+  </div>
 );
 
 export default CountdownUI;

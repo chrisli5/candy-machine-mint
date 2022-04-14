@@ -171,9 +171,10 @@ const Home = (props: HomeProps): JSX.Element => {
       <Purchase>
         {wallet ? (
           isActive ? (
-            <Countdown
-              date={new Date("2022-05-17T03:24:00")}
-              renderer={CountdownUI}
+            <TokenStats
+              itemsAvailable={itemsAvailable}
+              itemsRedeemed={itemsRedeemed}
+              itemsRemaining={itemsRemaining}
             />
           ) : (
             <Countdown

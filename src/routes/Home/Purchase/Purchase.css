@@ -1,14 +1,14 @@
 .purchase__button {
     padding: 1.25rem 1rem 1rem 1rem;
-    background-color: #f3d2c1;
-    border-radius: 0.5rem;
+    background-color: var(--secondary-bg);
+    border-radius: 0.25rem;
 }
 
 .purchase__title {
     margin-bottom: 0.75rem;
     text-align: center;
     font-weight: 550;
-    color: #001858;
+    color: var(--primary-bg);
 }
 
 .purchase__text {
