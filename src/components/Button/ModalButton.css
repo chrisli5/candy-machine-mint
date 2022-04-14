@@ -1,0 +1,38 @@
+.modal-button {
+    display: flex;
+    overflow: hidden;
+    justify-content: start !important;
+    padding: 0;
+    margin: 0;
+    height: 3rem;
+    background-color: #ff6e6c;
+    border: none;
+    border-radius: 0.25rem;
+    outline: none;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+}
+
+.modal-button:active,
+.modal-button:not([disabled]):hover {
+    background-color: #E65553;
+}
+
+.modal-button__icon {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 1.5rem;
+    color: #fff;
+    height: 100%;
+    text-align: center;
+}
+
+.modal-button__text {
+    width: 100%;
+}
+
+.modal-button__icon {
+    font-size: 1.5rem;
+    background: rgba(0, 0, 0, 0.08);
+}

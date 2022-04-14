@@ -1,25 +1,26 @@
 .wallet-adapter-button {
+  display: flex;
+  overflow: hidden;
   background-color: transparent;
   border: none;
   color: #fff;
   cursor: pointer;
-  display: flex;
   align-items: center;
   font-family: 'ProximaNova', 'DM Sans', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
-  height: 48px;
-  line-height: 48px;
-  padding: 0 24px;
-  border-radius: 4px;
+  height: 3rem;
+  line-height: 3rem;
+  padding: 0 1.5rem;
+  border-radius: 0.25rem;
 }
 
 .wallet-adapter-button-trigger {
   background-color: #ff6e6c;
-  height: 40px;
-  line-height: 40px;
-  padding: 0 14px;
-  font-size: 14px;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  padding: 0 0.875rem;
+  font-size: 0.875rem;
 }
 
 .wallet-adapter-button:not([disabled]):focus-visible {
@@ -28,6 +29,10 @@
 
 .wallet-adapter-button:not([disabled]):hover {
   background-color: #1a1f2e;
+}
+
+.wallet-adapter-button-trigger:not([disabled]):hover {
+  background-color: #e65553;
 }
 
 .wallet-adapter-button[disabled] {

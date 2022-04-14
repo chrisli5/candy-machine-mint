@@ -18,6 +18,10 @@ import Purchase from "./Purchase/Purchase";
 import Footer from "./Footer/Footer";
 import Hero from "./Hero/Hero";
 import Roadmap from "./Roadmap/Roadmap";
+import TokenStats from "../../components/TokenStats/TokenStats";
+import CountdownUI from "../../components/CountdownUI/CountdownUI";
+import Countdown from "react-countdown";
+import ModalButton from "../../components/Button/ModalButton";
 
 export interface HomeProps {
   candyMachineId: anchor.web3.PublicKey;
@@ -164,7 +168,25 @@ const Home = (props: HomeProps): JSX.Element => {
       <Introduction />
       <Specifications />
       <Features />
-      <Purchase />
+      <Purchase>
+        {wallet ? (
+          isActive ? (
+            <Countdown
+              date={new Date("2022-05-17T03:24:00")}
+              renderer={CountdownUI}
+            />
+          ) : (
+            <Countdown
+              date={startDate}
+              onMount={({ completed }) => completed && setIsActive(true)}
+              onComplete={() => setIsActive(true)}
+              renderer={CountdownUI}
+            />
+          )
+        ) : (
+          <ModalButton />
+        )}
+      </Purchase>
       <Roadmap />
       <About />
       <Footer />

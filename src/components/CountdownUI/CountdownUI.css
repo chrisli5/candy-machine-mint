@@ -1,0 +1,39 @@
+.countdownUI {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    list-style: none;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.35rem;
+}
+
+.countdownUI__li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3rem;
+    background-color: #fef6e4;
+    border-radius: .25rem;
+    
+}
+
+.countdownUI__value {
+    border-radius: 0.5rem;
+    text-align: center;
+    width: 100%;
+    font-weight: 600;
+    color: #001858;
+}
+
+.countdownUI__label {
+    font-size: 0.75rem;
+    text-transform: lowercase;
+    font-weight: 500;
+    color: #172c66;
+}
