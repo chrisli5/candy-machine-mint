@@ -1,9 +1,21 @@
+.gallery__title {
+    color: var(--primary-headline);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.gallery__accordion {
+    margin: 1rem 0;
+}
+
 .gallery__container {
     position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    height: 23.5rem;
 }
 
 .gallery__layer {
     position: absolute;
     left: 0;
-    width: 20rem;
 }

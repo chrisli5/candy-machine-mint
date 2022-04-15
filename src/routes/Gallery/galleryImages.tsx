@@ -89,7 +89,7 @@ const items = [
 
 const hats = [
   {
-    name: "None",
+    name: "Hats",
     url: bgNone,
   },
   {
@@ -106,4 +106,27 @@ const hats = [
   },
 ];
 
-export { bgs, bases, clothings, items, hats };
+const initOptions = [
+  {
+    name: "Background",
+    url: bgBlue,
+  },
+  {
+    name: "Skin",
+    url: baseOrange,
+  },
+  {
+    name: "Clothing",
+    url: bgNone,
+  },
+  {
+    name: "Item",
+    url: bgNone,
+  },
+  {
+    name: "Hat",
+    url: bgNone,
+  },
+];
+
+export { bgs, bases, clothings, items, hats, initOptions };

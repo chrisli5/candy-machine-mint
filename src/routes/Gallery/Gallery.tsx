@@ -1,23 +1,37 @@
 import { useState } from "react";
 import Section from "../../components/Section/Section";
 import Accordion from "react-bootstrap/Accordion";
-import { bgs, bases, clothings, items, hats } from "./galleryImages";
+import {
+  initOptions,
+  bgs,
+  bases,
+  clothings,
+  items,
+  hats,
+} from "./galleryImages";
 import AccordionSelect from "../../components/Select/AccordionSelect";
-import { Image } from "react-bootstrap";
+import { Button, Image } from "react-bootstrap";
 import "./Gallery.css";
 
 const Gallery = (): JSX.Element => {
-  const [base, setBase] = useState(bases[0]);
-  const [bg, setBg] = useState(bgs[0]);
-  const [clothing, setClothing] = useState(clothings[0]);
-  const [item, setItem] = useState(items[0]);
-  const [hat, setHat] = useState(hats[0]);
+  const [bg, setBg] = useState(initOptions[0]);
+  const [base, setBase] = useState(initOptions[1]);
+  const [clothing, setClothing] = useState(initOptions[2]);
+  const [item, setItem] = useState(initOptions[3]);
+  const [hat, setHat] = useState(initOptions[4]);
+
+  const onReset = () => {
+    setBg(initOptions[0]);
+    setBase(initOptions[1]);
+    setClothing(initOptions[2]);
+    setItem(initOptions[3]);
+    setHat(initOptions[4]);
+  };
 
   return (
     <main>
       <Section id="Gallery">
-        <h2>Gallery</h2>
-        <Accordion>
+        <Accordion className="gallery__accordion">
           <AccordionSelect
             eventKey="0"
             ariaLabel="select-bg"
@@ -54,6 +68,8 @@ const Gallery = (): JSX.Element => {
             onChange={setHat}
           />
         </Accordion>
+        <Button onClick={onReset}>Reset</Button>
+
         <div className="gallery__container">
           <Image src={bg.url} className="gallery__layer" fluid />
           <Image src={base.url} className="gallery__layer" fluid />

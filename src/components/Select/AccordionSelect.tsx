@@ -28,12 +28,16 @@ const CustomToggle = ({ children, eventKey }) => {
 const AccordionSelect = (props: AccordionSelectProps): JSX.Element => (
   <CustomToggle eventKey={props.eventKey}>
     <Accordion.Header>
-      <h2>{props.selected.name}</h2>
+      <h3 className="accordion__title">{props.selected.name}</h3>
     </Accordion.Header>
-    <Accordion.Body>
-      <ul>
+    <Accordion.Body className="accordion__body">
+      <ul className="accordion__ul">
         {props.optionList.map((option) => (
-          <li key={option.name} onClick={() => props.onChange(option)}>
+          <li
+            key={option.name}
+            className="accordion__li"
+            onClick={() => props.onChange(option)}
+          >
             {option.name}
           </li>
         ))}
