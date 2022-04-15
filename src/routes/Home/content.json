@@ -23,6 +23,32 @@
         "title": "Adopt a Kyubi",
         "body": ["Connect your wallet to begin. Once all kyubis have been adopted, you'll only be able to obtain one through secondary marketplaces."]
     },
+    "roadmap": {
+        "title": "Roadmap Goals",
+        "body": ["This is a tentative roadmap of our planned features as we reach certain checkpoints. These goals are tentative and we're open to feedback from the community. You'll also be able to track the progress of the project if you have a connected wallet."],
+        "timeline": [{
+            "title": "Our Journey Begins",
+            "percent": 0,
+            "description": "It's time for kyubis to travel across the globe!"
+        }, {
+            "title": "Kyubits Raffle",
+            "percent": 10,
+            "description": "A raffle will be held for 5 Kyubit NFTs in our community discord."
+        }, {
+            "title": "The Fox Den",
+            "percent": 25,
+            "description": "Holders of Kyubit NFTs will gain exclusive access to the Fox Den, a discord channel to discuss everything NFT related. Gaining access to this channel also allows you to provide input on future features of the project."
+        }, 
+        {
+            "title": "Breeding Mechanism",
+            "percent": 50,
+            "description": "A breeding mechanism will be implemented, allowing Kyubis to produce a second generation of Kyubis. More details will be provided as we reach this goal."
+        }, {
+            "title": "Kyubits Gaming",
+            "percent": 75,
+            "description": "A browser-based game with NFT integration will be developed. The Kyubit NFT you own will grant you access and serve as your avatar in the game. We will provide much more information to the community as we reach closer to this goal."
+        }]
+    },
     "about": {
         "title": "Meet the Team",
         "body": ["Hi there, We're Chris and Catherine and we're the creators of Kyubits. One of our favorite things to do is launch fun, innovative and sometimes silly projects to see our ideas come to life! Our goal with this project is to provide the community with an interactive NFT experience along side world building."],
