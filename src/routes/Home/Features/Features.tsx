@@ -12,6 +12,14 @@ import imageTopHat from "../../../images/features/tophat.png";
 import { features } from "../content.json";
 import "./Features.css";
 
+const images = [
+  imageCamera,
+  imageLuggage,
+  imageRocket,
+  imageSnail,
+  imageTopHat,
+];
+
 const Features = (): JSX.Element => (
   <Section id="features">
     <Row>
@@ -21,36 +29,14 @@ const Features = (): JSX.Element => (
       </Col>
       <Col xs={12}>
         <Row className="features__row">
-          <Col xs={6} md={2} className="features__col">
-            <div className="features__wrapper">
-              <Image src={imageCamera} className="features__image" fluid />
-            </div>
-            <p className="features__caption">{features.captions[0]}</p>
-          </Col>
-          <Col xs={6} md={2} className="features__col">
-            <div className="features__wrapper">
-              <Image src={imageLuggage} className="features__image" fluid />
-            </div>
-            <p className="features__caption">{features.captions[1]}</p>
-          </Col>
-          <Col xs={6} md={2} className="features__col">
-            <div className="features__wrapper">
-              <Image src={imageRocket} className="features__image" fluid />
-            </div>
-            <p className="features__caption">{features.captions[2]}</p>
-          </Col>
-          <Col xs={6} md={2} className="features__col">
-            <div className="features__wrapper">
-              <Image src={imageSnail} className="features__image" fluid />
-            </div>
-            <p className="features__caption">{features.captions[3]}</p>
-          </Col>
-          <Col xs={6} md={2} className="features__col">
-            <div className="features__wrapper">
-              <Image src={imageTopHat} className="features__image" fluid />
-            </div>
-            <p className="features__caption">{features.captions[4]}</p>
-          </Col>
+          {features.captions.map((caption, i) => (
+            <Col xs={6} md={2} key={i} className="features__col">
+              <div className="features__wrapper">
+                <Image src={images[i]} className="features__image" fluid />
+              </div>
+              <p className="features__caption">{caption}</p>
+            </Col>
+          ))}
         </Row>
       </Col>
     </Row>

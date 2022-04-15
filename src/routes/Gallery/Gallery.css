@@ -1,0 +1,9 @@
+.gallery__container {
+    position: relative;
+}
+
+.gallery__layer {
+    position: absolute;
+    left: 0;
+    width: 20rem;
+}

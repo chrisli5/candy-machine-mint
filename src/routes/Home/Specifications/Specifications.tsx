@@ -11,6 +11,8 @@ import imageTuxedo from "../../../images/specs/tuxedo.png";
 import { specifications } from "../content.json";
 import "./Specifications.css";
 
+const images = [imageTuxedo, imageCrab, imageDonut, imageSki];
+
 const Specifications = (): JSX.Element => (
   <Section id="specifications">
     <Row>
@@ -23,18 +25,11 @@ const Specifications = (): JSX.Element => (
       </Col>
       <Col xs={12} lg={{ span: 4, offset: 1 }}>
         <Row className="specs__row">
-          <Col xs={6} className="specs__col">
-            <Image src={imageTuxedo} className="specs__image" fluid />
-          </Col>
-          <Col xs={6} className="specs__col">
-            <Image src={imageSki} className="specs__image" fluid />
-          </Col>
-          <Col xs={6} className="specs__col">
-            <Image src={imageDonut} className="specs__image" fluid />
-          </Col>
-          <Col xs={6} className="specs__col">
-            <Image src={imageCrab} className="specs__image" fluid />
-          </Col>
+          {images.map((image, i) => (
+            <Col xs={6} key={i} className="specs__col">
+              <Image src={image} className="specs__image" fluid />
+            </Col>
+          ))}
         </Row>
       </Col>
     </Row>

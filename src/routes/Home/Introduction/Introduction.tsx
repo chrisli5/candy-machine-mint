@@ -10,6 +10,8 @@ import imageNinja from "../../../images/intro/ninja.png";
 import { introduction } from "../content.json";
 import "./Introduction.css";
 
+const images = [imageNinja, imageSpace, imageBeach];
+
 const Introduction = (): JSX.Element => (
   <Section id="introduction">
     <Row>
@@ -21,15 +23,11 @@ const Introduction = (): JSX.Element => (
       </Col>
       <Col xs={12} lg={{ span: 4, offset: 1 }}>
         <Row className="intro__row">
-          <Col xs={4} className="intro__col">
-            <Image src={imageNinja} className="intro__image" fluid />
-          </Col>
-          <Col xs={4} className="intro__col">
-            <Image src={imageSpace} className="intro__image" fluid />
-          </Col>
-          <Col xs={4} className="intro__col">
-            <Image src={imageBeach} className="intro__image" fluid />
-          </Col>
+          {images.map((image, i) => (
+            <Col xs={4} key={i} className="intro__col">
+              <Image src={image} className="intro__image" fluid />
+            </Col>
+          ))}
         </Row>
       </Col>
     </Row>

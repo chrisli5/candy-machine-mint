@@ -5,7 +5,7 @@
 }
 
 .footer__body, .footer__copyright {
-    color: var(--primary-body);
+    color:var(--primary-body);
 }
 
 .footer__body, .footer__link {
@@ -19,7 +19,7 @@
 .footer__ul {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -35,4 +35,5 @@
 
 .footer__copyright {
     font-size: 0.75rem;
+    color:var(--primary-body);
 }

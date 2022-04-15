@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Header from "../components/Header/Header";
 import Navbar from "../components/Navbar/Navbar";
 import Home from "../routes/Home/Home";
-import Gallery from "../routes/Gallery";
+import Gallery from "../routes/Gallery/Gallery";
 import "./app.css";
 
 const treasury = new anchor.web3.PublicKey(

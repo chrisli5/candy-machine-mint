@@ -9,30 +9,25 @@ import imagePencil from "../../../images/about/pencil2.png";
 import { about } from "../content.json";
 import "./About.css";
 
+const images = [imageLaptop, imagePencil];
+
 const About = (): JSX.Element => (
   <Section id="about">
     <Row>
       <Title>{about.title}</Title>
       <Body>{about.body[0]}</Body>
     </Row>
-    <Row>
-      <Col xs={12} md={3}>
-        <Image src={imageLaptop} className="intro__image" fluid />
-      </Col>
-      <Col>
-        <Title>{about.team[0].role}</Title>
-        <Body>{about.team[0].description}</Body>
-      </Col>
-    </Row>
-    <Row>
-      <Col xs={12} md={3}>
-        <Image src={imagePencil} className="intro__image" fluid />
-      </Col>
-      <Col>
-        <Title>{about.team[1].role}</Title>
-        <Body>{about.team[1].description}</Body>
-      </Col>
-    </Row>
+    {about.team.map((item, i) => (
+      <Row key={item.name}>
+        <Col xs={12} md={13}>
+          <Image src={images[i]} className="intro__image" fluid />
+        </Col>
+        <Col>
+          <Title>{item.role}</Title>
+          <Body>{item.description}</Body>
+        </Col>
+      </Row>
+    ))}
   </Section>
 );
 

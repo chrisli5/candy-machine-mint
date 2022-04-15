@@ -1,3 +1,4 @@
+import React from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Timeline from "@mui/lab/Timeline";
@@ -17,9 +18,11 @@ const Roadmap = (): JSX.Element => (
       <Col xs={12}>
         <Timeline position="alternate">
           {roadmap.timeline.map((item) => (
-            <MapItem percent={item.percent} title={item.title}>
-              {item.description}
-            </MapItem>
+            <React.Fragment key={item.title}>
+              <MapItem percent={item.percent} title={item.title}>
+                {item.description}
+              </MapItem>
+            </React.Fragment>
           ))}
         </Timeline>
       </Col>
