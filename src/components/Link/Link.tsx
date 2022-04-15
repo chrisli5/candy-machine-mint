@@ -3,6 +3,7 @@ import "./NavLink.css";
 interface LinkProps {
   href: string;
   children: string;
+  className?: string;
 }
 
 const Link = (props: LinkProps): JSX.Element => (
@@ -10,7 +11,7 @@ const Link = (props: LinkProps): JSX.Element => (
     rel="noopener noreferrer"
     href={props.href}
     target="_blank"
-    className="navlink"
+    className={props.className ? `navlink ${props.className}` : `navlink`}
   >
     {props.children}
   </a>

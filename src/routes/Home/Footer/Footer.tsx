@@ -1,20 +1,32 @@
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Image from "react-bootstrap/Image";
 import Section from "../../../components/Section/Section";
-import Title from "../../../components/Text/Title";
-import Body from "../../../components/Text/Body";
+import Link from "../../../components/Link/Link";
 import { footer } from "../content.json";
 import "./Footer.css";
 
 const Footer = (): JSX.Element => (
-  <Section id="introduction">
+  <Section id="footer">
     <Row>
-      <Col xs={12}>
-        <Title>{footer.title}</Title>
+      <Col xs={12} className="footer__left">
+        <h4 className="footer__title">{footer.title}</h4>
+        <p className="footer__body">
+          A NFT Project created on the Solana Blockchain
+        </p>
       </Col>
-      <Col xs={12} lg={7}></Col>
-      <Col xs={12} lg={{ span: 4, offset: 1 }}></Col>
+      <Col xs={12} className="footer__right">
+        <h4 className="footer__find">Find Us</h4>
+        <ul className="footer__ul">
+          {footer.links.map((item) => (
+            <li className="footer__li">
+              <Link href={item.href} className="footer__link">
+                {item.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </Col>
+      <p className="footer__copyright">{footer.copyright}</p>
     </Row>
   </Section>
 );
