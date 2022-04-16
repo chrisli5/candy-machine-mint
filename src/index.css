@@ -3,6 +3,8 @@
   --primary-headline: #fffffe;
   --primary-body: #b8c1ec;
   --primary-button: #ff6e6c;
+  --primary-button-hover: #e65553;
+  --primary-button-active: #e65553;
   --primary-highlight: #eebbc3;
   --primary-link: #5f6c7b;
 
@@ -15,7 +17,7 @@
 
 body {
   margin: 0;
-  font-family: "ProximaNova", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  font-family: "proxima_nova_regular", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;

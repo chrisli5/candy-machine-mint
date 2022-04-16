@@ -1,8 +1,9 @@
 .title {
+    font-family: "proxima_nova_semibold";
     color: var(--primary-headline);
     text-align: center;
-    font-weight: 500;
     margin-bottom: 0.75rem;
+   
 }
 
 @media only screen and (min-width: 768px) {
