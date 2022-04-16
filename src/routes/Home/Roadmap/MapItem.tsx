@@ -10,6 +10,7 @@ interface MapItemProps {
   title: string;
   percent: number;
   children: string;
+  active: boolean;
 }
 
 const MapItem = (props: MapItemProps): JSX.Element => (
@@ -18,8 +19,15 @@ const MapItem = (props: MapItemProps): JSX.Element => (
       <h5 className="map-item__percent">{props.percent}%</h5>
     </TimelineOppositeContent>
     <TimelineSeparator>
-      <TimelineDot variant="outlined" className="map-item__dot" />
-      <TimelineConnector className="map-item__connector" />
+      <TimelineDot
+        variant="outlined"
+        className={props.active ? "map-item__dot--active" : "map-item__dot"}
+      />
+      <TimelineConnector
+        className={
+          props.active ? "map-item__connector--active" : "map-item__connector"
+        }
+      />
     </TimelineSeparator>
     <TimelineContent>
       <h5 className="map-item__title">{props.title}</h5>

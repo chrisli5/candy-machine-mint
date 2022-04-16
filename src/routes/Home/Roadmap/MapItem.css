@@ -2,8 +2,16 @@
     background-color: var(--primary-body) !important;
 }
 
+.map-item__connector--active {
+    background-color: #ff8e3c !important;
+}
+
 .map-item__dot {
-    border-color: var(--primary-headline) !important;
+    border-color: var(--primary-body) !important;
+}
+
+.map-item__dot--active {
+    border-color: #ff8e3c !important;
 }
 
 .map-item__percent {

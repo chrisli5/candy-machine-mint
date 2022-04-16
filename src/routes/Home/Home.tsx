@@ -197,7 +197,7 @@ const Home = (props: HomeProps): JSX.Element => {
           <ModalButton />
         )}
       </Purchase>
-      <Roadmap />
+      <Roadmap percentSold={percentSold} />
       <About />
       <Footer />
     </main>

@@ -8,7 +8,11 @@ import Body from "../../../components/Text/Body";
 import { roadmap } from "../content.json";
 import MapItem from "./MapItem";
 
-const Roadmap = (): JSX.Element => (
+interface RoadmapProps {
+  percentSold: number;
+}
+
+const Roadmap = (props: RoadmapProps): JSX.Element => (
   <Section id="roadmap">
     <Row>
       <Col xs={12}>
@@ -19,7 +23,11 @@ const Roadmap = (): JSX.Element => (
         <Timeline position="alternate">
           {roadmap.timeline.map((item) => (
             <React.Fragment key={item.title}>
-              <MapItem percent={item.percent} title={item.title}>
+              <MapItem
+                percent={item.percent}
+                title={item.title}
+                active={props.percentSold >= item.percent}
+              >
                 {item.description}
               </MapItem>
             </React.Fragment>
