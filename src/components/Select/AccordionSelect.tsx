@@ -35,7 +35,11 @@ const AccordionSelect = (props: AccordionSelectProps): JSX.Element => (
         {props.optionList.map((option) => (
           <li
             key={option.name}
-            className="accordion__li"
+            className={
+              props.selected.name === option.name
+                ? "accordion__li accordion__li--active"
+                : "accordion__li"
+            }
             onClick={() => props.onChange(option)}
           >
             {option.name}

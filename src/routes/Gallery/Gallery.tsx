@@ -10,7 +10,7 @@ import {
   hats,
 } from "./galleryImages";
 import AccordionSelect from "../../components/Select/AccordionSelect";
-import { Button, Image } from "react-bootstrap";
+import Image from "react-bootstrap/Image";
 import "./Gallery.css";
 
 const Gallery = (): JSX.Element => {
@@ -31,7 +31,8 @@ const Gallery = (): JSX.Element => {
   return (
     <main>
       <Section id="Gallery">
-        <Accordion className="gallery__accordion">
+        <h2 className="gallery__title">Gallery</h2>
+        <Accordion className="accordion-flush gallery__accordion">
           <AccordionSelect
             eventKey="0"
             ariaLabel="select-bg"
@@ -68,7 +69,9 @@ const Gallery = (): JSX.Element => {
             onChange={setHat}
           />
         </Accordion>
-        <Button onClick={onReset}>Reset</Button>
+        <div className="gallery__reset" onClick={onReset}>
+          <span>Reset</span>
+        </div>
 
         <div className="gallery__container">
           <Image src={bg.url} className="gallery__layer" fluid />

@@ -89,10 +89,6 @@ const items = [
 
 const hats = [
   {
-    name: "Hats",
-    url: bgNone,
-  },
-  {
     name: "Ninja Mask",
     url: hatNinja,
   },

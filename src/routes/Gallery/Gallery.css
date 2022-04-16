@@ -4,8 +4,14 @@
     margin-bottom: 1rem;
 }
 
+.gallery__title {
+    font-family: "proxima_nova_bold";
+    font-size: 1.5rem;
+    margin: 0;
+}
+
 .gallery__accordion {
-    margin: 1rem 0;
+    margin: 0.75rem 0;
 }
 
 .gallery__container {
@@ -18,4 +24,18 @@
 .gallery__layer {
     position: absolute;
     left: 0;
+}
+
+.gallery__reset {
+    background-color: var(--primary-button);
+    color: var(--primary-headline);
+    font-family: "proxima_nova_semibold";
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    margin: 1rem 0;
+}
+
+.gallery__reset:hover {
+    background-color: var(--primary-button-hover);
 }
