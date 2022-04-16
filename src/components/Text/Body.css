@@ -2,3 +2,7 @@
     color: var(--primary-body);
     text-align: justify;
 }
+
+.body--secondary {
+    color: var(--secondary-body);
+}

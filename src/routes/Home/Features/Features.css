@@ -16,7 +16,7 @@
 
 .features__caption {
     font-size: 0.75rem;
-    color: var(--primary-body);
+    color: var(--secondary-body);
 }
 
 @media only screen and (min-width: 768px) {

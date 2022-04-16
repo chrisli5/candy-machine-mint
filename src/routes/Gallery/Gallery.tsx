@@ -30,7 +30,7 @@ const Gallery = (): JSX.Element => {
 
   return (
     <main>
-      <Section id="Gallery">
+      <Section id="gallery">
         <h2 className="gallery__title">Gallery</h2>
         <Accordion className="accordion-flush gallery__accordion">
           <AccordionSelect

@@ -14,14 +14,14 @@ import "./Specifications.css";
 const images = [imageTuxedo, imageCrab, imageDonut, imageSki];
 
 const Specifications = (): JSX.Element => (
-  <Section id="specifications">
+  <Section id="specifications" className="section--secondary">
     <Row>
       <Col xs={12}>
-        <Title>{specifications.title}</Title>
+        <Title className="title--secondary">{specifications.title}</Title>
       </Col>
       <Col xs={12} lg={7}>
-        <Body>{specifications.body[0]}</Body>
-        <Body>{specifications.body[1]}</Body>
+        <Body className="body--secondary">{specifications.body[0]}</Body>
+        <Body className="body--secondary">{specifications.body[1]}</Body>
       </Col>
       <Col xs={12} lg={{ span: 4, offset: 1 }}>
         <Row className="specs__row">

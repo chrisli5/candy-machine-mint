@@ -168,7 +168,6 @@ const Home = (props: HomeProps): JSX.Element => {
       <Hero />
       <Introduction />
       <Specifications />
-      <Features />
       <Purchase>
         {wallet ? (
           isActive ? (
@@ -198,6 +197,7 @@ const Home = (props: HomeProps): JSX.Element => {
         )}
       </Purchase>
       <Roadmap percentSold={percentSold} />
+      <Features />
       <About />
       <Footer />
     </main>

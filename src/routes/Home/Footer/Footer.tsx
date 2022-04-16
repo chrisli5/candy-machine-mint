@@ -15,7 +15,7 @@ const Footer = (): JSX.Element => (
         </p>
       </Col>
       <Col xs={12} className="footer__right">
-        <h4 className="footer__find">Find Us</h4>
+        <h4 className="footer__title">Find Us</h4>
         <ul className="footer__ul">
           {footer.links.map((item) => (
             <li key={item.title} className="footer__li">

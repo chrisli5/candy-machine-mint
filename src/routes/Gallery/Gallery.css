@@ -3,6 +3,10 @@
     font-weight: 500;
     margin-bottom: 1rem;
 }
+#gallery {
+    padding-top: 0.75rem;
+}
+
 
 .gallery__title {
     font-family: "proxima_nova_bold";

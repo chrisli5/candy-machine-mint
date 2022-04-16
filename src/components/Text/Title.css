@@ -3,7 +3,10 @@
     color: var(--primary-headline);
     text-align: center;
     margin-bottom: 0.75rem;
-   
+}
+
+.title--secondary {
+    color: var(--secondary-headline);
 }
 
 @media only screen and (min-width: 768px) {

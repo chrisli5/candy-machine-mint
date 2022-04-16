@@ -21,11 +21,11 @@ const images = [
 ];
 
 const Features = (): JSX.Element => (
-  <Section id="features">
+  <Section id="features" className="section--secondary">
     <Row>
       <Col xs={12}>
-        <Title>{features.title}</Title>
-        <Body>{features.body[0]}</Body>
+        <Title className="title--secondary">{features.title}</Title>
+        <Body className="body--secondary">{features.body[0]}</Body>
       </Col>
       <Col xs={12}>
         <Row className="features__row">
