@@ -7,12 +7,17 @@
 .purchase__title {
     margin-bottom: 0.75rem;
     text-align: center;
-    font-weight: 550;
-    color: var(--primary-bg);
+    color: var(--secondary-headline);
+    font-family: "proxima_nova_semibold";
 }
 
 .purchase__text {
     text-align: justify;
     margin-bottom: 1rem;
-    color: #172c66;
+    color: var(--secondary-body);
+}
+
+.purchase__image {
+    padding: 0 2.25rem;
+    margin-bottom: 1rem;
 }

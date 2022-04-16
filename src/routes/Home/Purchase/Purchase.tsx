@@ -1,5 +1,7 @@
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Image from "react-bootstrap/Image";
+import imageBody from "../../../images/body.png";
 import Section from "../../../components/Section/Section";
 import Title from "../../../components/Text/Title";
 import Body from "../../../components/Text/Body";
@@ -19,6 +21,9 @@ const Purchase = (props: PurchaseProps): JSX.Element => (
       </Col>
       <Col xs={12} className="purchase__button">
         <div>
+          <div className="purchase__image">
+            <Image src={imageBody} fluid />
+          </div>
           <h4 className="purchase__title">{purchaseButton.title}</h4>
           <p className="purchase__text">{purchaseButton.body[0]}</p>
         </div>

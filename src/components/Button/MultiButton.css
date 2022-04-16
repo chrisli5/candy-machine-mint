@@ -6,9 +6,8 @@
   color: #fff;
   cursor: pointer;
   align-items: center;
-  font-family: 'ProximaNova', 'DM Sans', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'proxima_nova_semibold', 'DM Sans', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 1rem;
-  font-weight: 600;
   height: 3rem;
   line-height: 3rem;
   padding: 0 1.5rem;
@@ -16,7 +15,7 @@
 }
 
 .wallet-adapter-button-trigger {
-  background-color: #ff6e6c;
+  background-color: var(--primary-button);
   height: 2.5rem;
   line-height: 2.5rem;
   padding: 0 0.875rem;
@@ -32,7 +31,7 @@
 }
 
 .wallet-adapter-button-trigger:not([disabled]):hover {
-  background-color: #e65553;
+  background-color: var(--primary-button-hover)
 }
 
 .wallet-adapter-button[disabled] {

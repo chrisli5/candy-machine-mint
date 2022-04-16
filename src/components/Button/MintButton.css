@@ -8,6 +8,10 @@
     font-weight: 600;
 }
 
+#mint-button:not([disabled]):hover {
+    background-color: var(--primary-button-hover);
+}
+
 .mint-button__inner {
     display: flex;
     flex-direction: row;

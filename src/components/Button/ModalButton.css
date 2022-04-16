@@ -5,7 +5,7 @@
     padding: 0;
     margin: 0;
     height: 3rem;
-    background-color: #ff6e6c;
+    background-color: var(--primary-button);
     border: none;
     border-radius: 0.25rem;
     outline: none;
@@ -16,7 +16,7 @@
 
 .modal-button:active,
 .modal-button:not([disabled]):hover {
-    background-color: #E65553;
+    background-color: var(--primary-button-hover);
 }
 
 .modal-button__icon {
