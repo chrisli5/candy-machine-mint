@@ -168,6 +168,8 @@ const Home = (props: HomeProps): JSX.Element => {
       <Hero />
       <Introduction />
       <Specifications />
+      <Roadmap percentSold={percentSold} />
+      <Features />
       <Purchase>
         {wallet ? (
           isActive ? (
@@ -196,8 +198,6 @@ const Home = (props: HomeProps): JSX.Element => {
           <ModalButton />
         )}
       </Purchase>
-      <Roadmap percentSold={percentSold} />
-      <Features />
       <About />
       <Footer />
     </main>

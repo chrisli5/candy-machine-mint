@@ -1,11 +1,11 @@
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
-import imageBody from "../../../images/body.png";
+import imageBody from "../../../images/box.png";
 import Section from "../../../components/Section/Section";
 import Title from "../../../components/Text/Title";
 import Body from "../../../components/Text/Body";
-import { purchase, purchaseButton } from "../content.json";
+import { purchase } from "../content.json";
 import "./Purchase.css";
 
 interface PurchaseProps {
@@ -19,15 +19,25 @@ const Purchase = (props: PurchaseProps): JSX.Element => (
         <Title>{purchase.title}</Title>
         <Body>{purchase.body[0]}</Body>
       </Col>
-      <Col xs={12} className="purchase__button">
-        <div>
-          <div className="purchase__image">
-            <Image src={imageBody} fluid />
+      <Col xs={12} md={6} className="purchase__grid">
+        <div className="purchase__card">
+          <div>
+            <h3 className="purchase__title">{purchase.cards[0].title}</h3>
+            <p className="purchase__body body--secondary">
+              {purchase.cards[0].body}
+            </p>
           </div>
-          <h4 className="purchase__title">{purchaseButton.title}</h4>
-          <p className="purchase__text">{purchaseButton.body[0]}</p>
+          <div className="purchase__container">{props.children}</div>
         </div>
-        {props.children}
+      </Col>
+      <Col xs={12} md={6} className="purchase__grid purchase__grid--bottom">
+        <div className="purchase__card">
+          <h3 className="purchase__title">{purchase.cards[1].title}</h3>
+          <p className="purchase__body body--secondary">
+            {purchase.cards[1].body}
+          </p>
+          <div className="purchase__container">{props.children}</div>
+        </div>
       </Col>
     </Row>
   </Section>

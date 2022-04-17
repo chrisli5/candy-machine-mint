@@ -8,13 +8,13 @@ import "./Footer.css";
 const Footer = (): JSX.Element => (
   <Section id="footer">
     <Row>
-      <Col xs={12} className="footer__left">
+      <Col xs={12} md={9} className="footer__left">
         <h4 className="footer__title">{footer.title}</h4>
         <p className="footer__body">
           A NFT Project created on the Solana Blockchain
         </p>
       </Col>
-      <Col xs={12} className="footer__right">
+      <Col xs={12} md={3} className="footer__right">
         <h4 className="footer__title">Find Us</h4>
         <ul className="footer__ul">
           {footer.links.map((item) => (

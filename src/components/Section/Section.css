@@ -1,7 +1,19 @@
 .section {
-    padding: 2rem 1.875rem 1rem 1.875rem;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
 }
 
 .section--secondary {
     background-color: var(--secondary-bg);
+}
+
+@media only screen and (min-width: 425px) {
+    .section {
+        padding: 2.25rem 2rem 2rem 2rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .section {
+        padding: 2.5rem 3rem 2rem 3rem;
+    }
 }

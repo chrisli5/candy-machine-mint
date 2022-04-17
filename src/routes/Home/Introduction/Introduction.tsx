@@ -7,24 +7,23 @@ import Body from "../../../components/Text/Body";
 import imageSpace from "../../../images/intro/space.png";
 import imageBeach from "../../../images/intro/beach.png";
 import imageNinja from "../../../images/intro/ninja.png";
+import imageSki from "../../../images/intro/ski.png";
 import { introduction } from "../content.json";
 import "./Introduction.css";
 
-const images = [imageNinja, imageSpace, imageBeach];
+const images = [imageBeach, imageSpace, imageNinja];
 
 const Introduction = (): JSX.Element => (
   <Section id="introduction">
-    <Row>
-      <Col xs={12}>
-        <Title>{introduction.title}</Title>
-      </Col>
+    <Row className="intro__row">
       <Col xs={12} lg={7}>
+        <Title>{introduction.title}</Title>
         <Body>{introduction.body[0]}</Body>
       </Col>
-      <Col xs={12} lg={{ span: 4, offset: 1 }}>
-        <Row className="intro__row">
+      <Col xs={12} lg={4} className="intro__outer">
+        <Row className="intro__inner">
           {images.map((image, i) => (
-            <Col xs={4} key={i} className="intro__col">
+            <Col xs={4} key={i} className="intro__container">
               <Image src={image} className="intro__image" fluid />
             </Col>
           ))}

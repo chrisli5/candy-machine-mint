@@ -1,0 +1,45 @@
+.about__image {
+    margin: auto;
+    margin-bottom: 1rem;
+    padding: 0 5rem;
+}
+
+.about__middle {
+    margin-top: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.about__bottom {
+    margin-top: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.about__title {
+    font-family: "proxima_nova_semibold";
+    font-size: 1.25rem;
+    color: var(--secondary-headline);
+    margin-top: 1rem;
+}
+
+@media only screen and (min-width: 375px) {
+    .about__image {
+        padding: 0 6.5rem;
+    }
+}
+
+@media only screen and (min-width: 425px) {
+    .about__image {
+        padding: 0 7rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .about__image {
+        margin: 0;
+        padding: 0 3rem 3rem 3rem;
+    }
+
+    .about__image--bottom {
+        padding-bottom: 0;
+    }
+}

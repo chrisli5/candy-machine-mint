@@ -12,16 +12,21 @@
         "title": "Token Specifications",
         "body": [
             "Kyubits is a collection of programmatically, randomly generated NFTs living on the Solana blockchain. Each fox is generated from over 100 possible traits of varying rarity. As you might suspect, not every fox is created equal, some will have much rarer attributes than others. Once the collection is released, we will publish the rarity ratings for each trait on this site.",
-            "Each Kyubit NFT is stored as a SPL Token on the Solana blockchain and its art counterpart is hosted on IPFS. The metadata associated with each token follows the guidelines outlined by the Metaplex Token Metadata contract."
+            "Each Kyubit NFT is stored as a SPL Token on the Solana blockchain and its art counterpart is hosted on IPFS. The metadata associated with each token follows the guidelines outlined by the Metaplex Token Metadata contract.",
+            "Kyubits is a collection of programmatically, randomly generated NFTs living on the Solana blockchain. Each fox is generated from over 100 possible traits of varying rarity. As you might suspect, not every fox is created equal, some will have much rarer attributes than others. Once the collection is released, we will publish the rarity ratings for each trait on this site."
         ]
     },
     "purchase": {
         "title": "Find Your Travel Companion",
-        "body": ["Begin your traveling journey with a fox today! Each traveling fox is guaranteed to be unique and duplicates will never exist. The initial 4,995 mints -five are withheld for giveaway purposes, is priced at 0.35 SOL and will be distributed on a first come first serve basis -so be ready to mint when the countdown hits zero!"]
-    },
-    "purchaseButton": {
-        "title": "Adopt a Kyubi",
-        "body": ["Connect your wallet to begin. Once all kyubis have been adopted, you'll only be able to obtain one through secondary marketplaces."]
+        "body": ["Begin your traveling journey with a fox today! Each traveling fox is guaranteed to be unique and duplicates will never exist. The initial 4,995 mints -five are withheld for giveaway purposes, is priced at 0.35 SOL and will be distributed on a first come first serve basis -so be ready to mint when the countdown hits zero!"],
+        "cards": [{
+            "title": "Adopt a Kyubi",
+            "body": "Connect your wallet to begin. Once all kyubis have been adopted, you'll only be able to obtain one through secondary marketplaces."
+        },
+    {
+        "title": "Rarity Checker Tool",
+        "body": "Once you've obtained at least 1 Kyubit NFT, you can use the following tool to check the rarity of the token. The rankings are generated based on the NFTs already in circulation."
+    }]
     },
     "roadmap": {
         "title": "Roadmap Goals",
@@ -55,11 +60,11 @@
         "team": [{
             "name": "Chris",
             "role": "Software Developer",
-            "description": "Each Kyubit NFT is stored as a SPL Token on the Solana blockchain"
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque in dictum non consectetur a. Accumsan sit amet nulla facilisi."
         }, {
             "name": "Catherine",
             "role": "Digital Artist & Creative Director",
-            "description": "Each Kyubit NFT is stored as a SPL Token on the Solana blockchain"
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque in dictum non consectetur a. Accumsan sit amet nulla facilisi."
         }]
     },
     "footer": {

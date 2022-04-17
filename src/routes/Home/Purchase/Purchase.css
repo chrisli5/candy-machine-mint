@@ -1,23 +1,41 @@
-.purchase__button {
-    padding: 1.25rem 1rem 1rem 1rem;
-    background-color: var(--secondary-bg);
-    border-radius: 0.25rem;
-}
-
 .purchase__title {
-    margin-bottom: 0.75rem;
     text-align: center;
     color: var(--secondary-headline);
     font-family: "proxima_nova_semibold";
+    margin-bottom: 1rem;
 }
 
-.purchase__text {
+.purchase__body {
     text-align: justify;
-    margin-bottom: 1rem;
     color: var(--secondary-body);
 }
 
-.purchase__image {
-    padding: 0 2.25rem;
-    margin-bottom: 1rem;
+.purchase__grid {
+    padding: 0.75rem;
 }
+
+.purchase__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--secondary-bg);
+    padding: 1.25rem;
+    border-radius: 0.25rem;
+    height: 100%;
+}
+
+.purchase__grid--bottom {
+    padding-bottom: 0;
+}
+
+@media only screen and (min-width: 425px) {
+    .purchase__card {
+        padding: 1.25rem;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .purchase__grid--bottom {
+        padding-bottom: 0.75rem;
+    }
+  }

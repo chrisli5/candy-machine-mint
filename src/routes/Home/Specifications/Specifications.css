@@ -1,9 +1,21 @@
 .specs__row {
-    padding: 0.5rem;
+    justify-content: space-between;
 }
 
-.specs__col {
+.specs__outer {
+    margin: 0;
+    padding: 0;
+}
+
+.specs__inner {
+    padding: 0;
+    margin: 0 0.5rem;
+    justify-content: center;
+}
+
+.specs__container {
     padding: 0.25rem;
+    margin: 0;
 }
 
 .specs__image {
