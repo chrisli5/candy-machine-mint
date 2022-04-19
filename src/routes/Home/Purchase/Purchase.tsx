@@ -1,7 +1,5 @@
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Image from "react-bootstrap/Image";
-import imageBody from "../../../images/box.png";
 import Section from "../../../components/Section/Section";
 import Title from "../../../components/Text/Title";
 import Body from "../../../components/Text/Body";
@@ -36,7 +34,11 @@ const Purchase = (props: PurchaseProps): JSX.Element => (
           <p className="purchase__body body--secondary">
             {purchase.cards[1].body}
           </p>
-          <div className="purchase__container">{props.children}</div>
+          <div className="purchase__container">
+            <div className="purchase__checker">
+              <span>Check Rarity</span>
+            </div>
+          </div>
         </div>
       </Col>
     </Row>

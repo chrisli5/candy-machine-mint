@@ -18,7 +18,8 @@
     font-family: "proxima_nova_semibold";
     font-size: 1.25rem;
     color: var(--secondary-headline);
-    margin-top: 1rem;
+    margin-top: 0.5rem;
+    text-align: center;
 }
 
 @media only screen and (min-width: 375px) {
@@ -36,10 +37,33 @@
 @media only screen and (min-width: 768px) {
     .about__image {
         margin: 0;
-        padding: 0 3rem 3rem 3rem;
+       padding: 0 1rem 1rem 1rem;
     }
 
     .about__image--bottom {
         padding-bottom: 0;
+    }
+
+    .about__title {
+        text-align: start;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .about__image {
+        padding: 0 2rem 2rem 2rem;
+    }
+    .about__title {
+        margin-top: 1rem;
+    }
+
+    .about__middle {
+        margin-top: 2rem;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .about__image {
+        padding: 0 5rem 1rem 3rem;
     }
 }

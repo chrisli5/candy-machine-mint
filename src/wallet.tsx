@@ -13,11 +13,9 @@ import {
 } from "@solana/wallet-adapter-wallets";
 import { clusterApiUrl } from "@solana/web3.js";
 import React, { FC, useCallback, useMemo } from "react";
-import Image from "react-bootstrap/Image";
 import toast, { Toaster } from "react-hot-toast";
 import App from "./app/app";
 import Notification from "./components/Notification/Notification";
-import imageHead from "./images/foxhead.png";
 
 const network = process.env.REACT_APP_SOLANA_NETWORK as WalletAdapterNetwork;
 

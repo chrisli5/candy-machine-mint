@@ -28,6 +28,20 @@
     padding-bottom: 0;
 }
 
+.purchase__checker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    background-color: var(--primary-button);
+    border-radius: 0.25rem;
+    font-family: "proxima_nova_semibold";
+    color: var(--primary-headline);
+    height: 3rem;
+
+}
+
 @media only screen and (min-width: 425px) {
     .purchase__card {
         padding: 1.25rem;

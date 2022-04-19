@@ -11,7 +11,7 @@ const Section = (props: SectionProps): JSX.Element => (
     id={props.id}
     className={props.className ? `section ${props.className}` : `section`}
   >
-    {props.children}
+    <div className="section__container">{props.children}</div>
   </div>
 );
 
