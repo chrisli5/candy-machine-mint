@@ -9,25 +9,6 @@ import {
 import toast from "react-hot-toast";
 import { useAnchorWallet } from "@solana/wallet-adapter-react";
 import { LAMPORTS_PER_SOL } from "@solana/web3.js";
-<<<<<<< HEAD:src/routes/Home.tsx
-import Col from "react-bootstrap/Col";
-
-import Notification from "../components/Notification/Notification";
-import Purchase from "../components/Purchase";
-import Hero from "../components/Hero/Hero";
-import Intro from "../components/Intro/Intro";
-import Specs from "../components/Specs";
-import Team from "../components/Team";
-import Features from "../components/Features/Features";
-import Roadmap from "../components/Roadmap/Roadmap";
-import Footer from "../components/Footer/Footer";
-import Countdown from "react-countdown";
-import Counter from "../components/Counter/Counter";
-import Tracker from "../components/Tracker/Tracker";
-import { WalletButton } from "../components/Buttons/Buttons";
-import MintButton from "../components/Buttons/MintButton";
-import TrackerImage from "../components/Tracker/TrackerImage";
-=======
 import Notification from "../../components/Notification/Notification";
 import Introduction from "./Introduction/Introduction";
 import Features from "./Features/Features";
@@ -42,7 +23,6 @@ import CountdownUI from "../../components/CountdownUI/CountdownUI";
 import Countdown from "react-countdown";
 import ModalButton from "../../components/Button/ModalButton";
 import MintButton from "../../components/Button/MintButton";
->>>>>>> reorg:src/routes/Home/Home.tsx
 
 export interface HomeProps {
   candyMachineId: anchor.web3.PublicKey;
@@ -186,14 +166,6 @@ const Home = (props: HomeProps): JSX.Element => {
   return (
     <main>
       <Hero />
-<<<<<<< HEAD:src/routes/Home.tsx
-      <Intro />
-      <Specs />
-      <Purchase>
-        <Col xs={12} lg={4} className="px-3 offset-lg-1 d-flex-column">
-          <TrackerImage />
-          {isActive ? (
-=======
       <Introduction />
       <Specifications />
       <Roadmap percentSold={percentSold} />
@@ -215,7 +187,6 @@ const Home = (props: HomeProps): JSX.Element => {
               />
             </div>
           ) : (
->>>>>>> reorg:src/routes/Home/Home.tsx
             <Countdown
               date={startDate}
               onMount={({ completed }) => completed && setIsActive(true)}
@@ -227,13 +198,7 @@ const Home = (props: HomeProps): JSX.Element => {
           <ModalButton />
         )}
       </Purchase>
-<<<<<<< HEAD:src/routes/Home.tsx
-      <Features />
-      <Roadmap percentSold={percentSold} />
-      <Team />
-=======
       <About />
->>>>>>> reorg:src/routes/Home/Home.tsx
       <Footer />
     </main>
   );

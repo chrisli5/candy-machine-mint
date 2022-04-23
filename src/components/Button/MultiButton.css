@@ -1,36 +1,13 @@
 .wallet-adapter-button {
-<<<<<<< HEAD:src/components/Buttons/DefaultWallet.css
-  font-size: var(--font-size-0);
-  background-color: #404144;
-=======
   display: flex;
   overflow: hidden;
   background-color: transparent;
   border: none;
->>>>>>> reorg:src/components/Button/MultiButton.css
   color: #fff;
   border: 0;
   border-radius: 0.25rem;
   cursor: pointer;
   align-items: center;
-<<<<<<< HEAD:src/components/Buttons/DefaultWallet.css
-  font-family: "ProximaNova", "Roboto", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
-  font-weight: 600;
-  padding: 0.5rem 0.75rem;
-}
-
-@media only screen and (min-width: 1440px) {
-  .wallet-adapter-button {
-    font-size: var(--font-size-1);
-  }
-}
-
-.wallet-adapter-button-trigger {
-  background-color: #ff6e6c;
-  color: #fffffe;
-  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
-=======
   font-family: 'proxima_nova_semibold', 'DM Sans', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 1rem;
   height: 3rem;
@@ -45,7 +22,6 @@
   line-height: 2.5rem;
   padding: 0 0.875rem;
   font-size: 0.875rem;
->>>>>>> reorg:src/components/Button/MultiButton.css
 }
 
 .wallet-adapter-button:not([disabled]):focus-visible {
