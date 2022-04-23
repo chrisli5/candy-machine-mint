@@ -1,0 +1,20 @@
+.navlink {
+    margin-right: 1rem;
+    font-weight: 500;
+    transition: 0.15s;
+    font-family: "proxima_nova_semibold";
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--primary-body);
+}
+
+.navlink--active,
+.navlink:hover {
+    color: var(--primary-headline);
+}
+
+@media only screen and (min-width: 1024px) {
+    .navlink {
+        margin-right: 2rem;
+    }
+  }

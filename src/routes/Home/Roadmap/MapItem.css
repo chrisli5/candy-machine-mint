@@ -1,0 +1,30 @@
+.map-item__connector {
+    background-color: var(--primary-body) !important;
+}
+
+.map-item__connector--active {
+    background-color: #ff8e3c !important;
+}
+
+.map-item__dot {
+    border-color: var(--primary-body) !important;
+}
+
+.map-item__dot--active {
+    border-color: #ff8e3c !important;
+}
+
+.map-item__percent {
+    color: var(--primary-headline);
+}
+
+.map-item__title {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--primary-headline);
+}
+
+.map-item__body {
+    font-size: 0.75rem;
+    color: var(--primary-body);
+}

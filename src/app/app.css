@@ -1,5 +1,10 @@
 .app__container {
-  max-width: 1200px;
-  margin-right: auto;
-  margin-left: auto;
+ margin-top: 4.5rem;
+ margin-bottom: 4rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .app__container {
+    margin-bottom: 0;
+  }
 }

@@ -1,35 +1,29 @@
 :root {
   --primary-bg: #232946;
   --primary-headline: #fffffe;
-  --primary-paragraph: #b8c1ec;
+  --primary-body: #b8c1ec;
   --primary-highlight: #eebbc3;
   --primary-link: #5f6c7b;
 
+  --primary-button: #ff6e6c;
+  --primary-button-hover: #e65553;
+  --primary-button-active: #e65553;
+
   --secondary-bg: #d8eefe;
   --secondary-headline: #094067;
-  --secondary-paragraph: #094067;
+  --secondary-body: #094067;
   --secondary-highlight: #eebbc3;
   --secondary-link: #5f6c7b;
-
-  --font-size--2: 0.625rem;
-  --font-size--1: 0.75rem;
-  --font-size-0: 1rem;
-  --font-size-1: calc(1.333 * var(--font-size-0));
-  --font-size-2: calc(1.333 * var(--font-size-1));
-  --font-size-3: calc(1.333 * var(--font-size-2));
-  --font-size-4: calc(1.333 * var(--font-size-3));
-  --font-size-5: calc(1.333 * var(--font-size-4));
 }
 
 body {
   margin: 0;
-  font-family: "ProximaNova", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-    "Helvetica Neue", sans-serif;
+  font-family: "proxima_nova_regular", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 1.5;
-  font-size: var(--font-size-0);
+  color: #000;
   background-color: var(--primary-bg);
 }
 

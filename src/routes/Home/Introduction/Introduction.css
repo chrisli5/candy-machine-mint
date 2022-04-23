@@ -1,0 +1,34 @@
+#introduction {
+    padding-top: 0.5rem;
+}
+
+.intro__row {
+    justify-content: space-between;
+}
+
+.intro__outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.intro__inner {
+    padding: 0;
+    margin: 0 0.5rem;
+    justify-content: center;
+}
+
+.intro__container {
+    padding: 0.25rem;
+    margin: 0;
+}
+
+.intro__image {
+    border-radius: 0.25rem;
+}
+
+@media only screen and (min-width: 425px) {
+
+  }

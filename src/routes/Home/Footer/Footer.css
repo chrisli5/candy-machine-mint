@@ -1,0 +1,26 @@
+.footer__title {
+    color: var(--primary-headline);
+}
+
+.footer__body {
+    color: var(--primary-body);
+}
+
+.footer__ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer__li {
+    margin-bottom: 0.5rem;
+}
+
+.footer__link:hover, .footer__link:active {
+    color: var(--primary-highlight);
+}
+
+.footer__copyright {
+    color: var(--primary-body);
+    font-size: 0.75rem;
+}

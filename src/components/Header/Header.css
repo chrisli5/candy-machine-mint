@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .header__logo {
   height: 3rem;
   width: 8rem;
@@ -9,3 +10,45 @@
     width: 13.5rem;
   }
 }
+=======
+.header__navbar {
+    background-color: var(--primary-bg);
+}
+
+.header__nav {
+    display: none;
+}
+
+.header__image {
+    height: 3rem;
+    width: 8rem;
+}
+
+.header__container {
+    max-width: 75rem;
+    padding: 0.25rem 1.5rem 0.25rem 0.75rem;
+}
+
+@media only screen and (min-width: 425px) {
+    .header__container {
+        padding: 0.25rem 2rem 0.25rem 1.25rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .header__container {
+        padding: 0.25rem 3rem 0.25rem 2.25rem;
+    }
+    .header__nav {
+        display: flex;
+        margin-right: auto;
+    }
+  }
+
+  @media only screen and (min-width: 1440px) {
+    .header__container {
+        padding: 0;
+    }
+  }
+
+>>>>>>> reorg

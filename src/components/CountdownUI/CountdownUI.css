@@ -1,0 +1,47 @@
+.countdownUI {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: #F2FFFF;
+    border-radius: 0.25rem;
+}
+
+.countdownUI__ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.countdownUI__li, .countdownUI__label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+}
+
+.countdownUI__value, .countdownUI__colon {
+    font-size: 1.25rem;
+    font-weight: 550;
+}
+
+.countdownUI__value {
+    color: var(--secondary-headline);
+}
+
+.countdownUI__colon {
+    color: var(--secondary-headline);
+}
+
+.countdownUI__label {
+    font-size: 0.75rem;
+    color: var(--secondary-body);
+    font-weight: 500;
+}
+
+.countdownUI__colon, .countdownUI__spacer {
+    width: 0.25rem;
+}

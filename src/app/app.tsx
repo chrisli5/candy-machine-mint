@@ -1,13 +1,10 @@
 import { Route, Switch } from "react-router-dom";
 import * as anchor from "@project-serum/anchor";
-import Container from "react-bootstrap/Container";
-import Home from "../routes/Home";
-import Gallery from "../routes/Gallery";
-import Provenance from "../routes/Provenance";
 import Header from "../components/Header/Header";
-import NavBottom from "../components/NavBottom";
+import Navbar from "../components/Navbar/Navbar";
+import Home from "../routes/Home/Home";
+import Gallery from "../routes/Gallery/Gallery";
 import "./app.css";
-import React from "react";
 
 const treasury = new anchor.web3.PublicKey(
   process.env.REACT_APP_TREASURY_ADDRESS!
@@ -30,9 +27,9 @@ const txTimeout = 30000; // milliseconds (confirm this works for your project)
 
 const App = (): JSX.Element => {
   return (
-    <div>
+    <div className="app__container">
       <Header />
-      <NavBottom />
+      <Navbar />
       <Switch>
         <Route exact path="/">
           <Home
@@ -46,9 +43,6 @@ const App = (): JSX.Element => {
         </Route>
         <Route path="/gallery">
           <Gallery />
-        </Route>
-        <Route path="/provenance">
-          <Provenance />
         </Route>
       </Switch>
     </div>
